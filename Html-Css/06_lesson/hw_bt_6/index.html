@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="section">
+            <div class="container">
+                <form class="form">
+                    <div class="form__item">
+                        <label for="name">Полное имя</label>
+                        <br>
+                        <input type="text" id="name" placeholder="" required>
+                        <br>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" id="email" placeholder="" required>
+                        <br>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="password">Пароль</label>
+                        <br>
+                        <input type="password" id="password" placeholder="" required>
+                        <br>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="password_one_more">Пароль еще раз</label>
+                        <br>
+                        <input type="password" id="password_one_more" placeholder="" required>
+                        <br>
+                    </div>
+
+                    <h3 class="text">Пол</h3>
+                    <div class="form__item">
+                        <input type="radio" id="radio_01" name="gen" value="Мужской">
+                        <label for="radio_01">Мужской</label>
+                        <br>
+                    </div>
+
+                    <div class="form__item">
+                        <input type="radio" id="radio_02" name="gen" value="Женский">
+                        <label for="radio_02">Женский</label>
+                        <br>
+                    </div>
+                    <br>
+
+                    <div class="form__item">
+                        <label for="number">Возраст</label>
+                        <br>
+                        <input type="number" id="number">
+
+                    </div>
+
+
+                    <div class="form__item">
+                        <label for="kurses">Выберите курс</label><br>
+                        <select name="kurses" id="kurses">
+                            <option value="--"></option>
+                            <option value="Front-end">Front-end development</option>
+                            <option value="design">UI/UX design</option>
+                            <option value="Project management">Project management in tech</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form__item">
+                        <label for="adress">Полный адрес</label> <br>
+                        <textarea name="adress" id="adress">Страна, регион, город, улица</textarea>
+                    </div>
+                    <br>
+
+                    <div class="form__checkbox">
+                        <input id="chec01" type="checkbox" required>
+                        <label for="chec01">
+                            Я соглашаюсь на обработку персональных данных
+                        </label>
+                    </div>
+
+                    <div class="form__button">
+                        <button class="button" type="reset">Очистить форму</button>
+                    </div>
+
+                    <div class="form__button">
+                        <button class="button" type="submit">Зарегистрироваться</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
