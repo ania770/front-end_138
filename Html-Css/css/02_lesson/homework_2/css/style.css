@@ -65,22 +65,15 @@ body {
     color: var(--color-white);
     width: 180px;
     height: 44px;
-    padding: auto 16px;
+    padding: 10px 16px;
     gap: 0px;
     border-radius: 22px;
 
-    font-size: 18px;
+    font-size: 100%;
     font-weight: 700;
     line-height: 24.51px;
     letter-spacing: 0.1em;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-
-
-
-
 
 }
 
@@ -201,6 +194,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .footer__sub-title {
@@ -230,6 +224,6 @@ footer {
 
 .footer__item:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 50%;
     transition: 2s;
 }
