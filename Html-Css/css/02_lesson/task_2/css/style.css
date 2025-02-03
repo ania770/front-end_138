@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*всегда начинаем с этого*/
+
+.title::before {
+    content: '👻';
+
+}
+
+.title::after {
+    content: '👻';
+
+}
+
+.text::before {
+    display: block;
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: blueviolet;
+
+
+}
+
+/*
+.button::after {
+    display: block;
+    content: '👻';
+    width: 40px;
+    height: 3px;
+    background-color: blueviolet;
+
+
+}
+    */

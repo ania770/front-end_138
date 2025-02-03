@@ -1,0 +1,235 @@
+/* Звернення до всіх Єлементів */
+
+:root {
+    --color-grey: #F6F6F6;
+    --color-black: #070707;
+    --color-white: #fff;
+    --header-line-color: #828282;
+}
+
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+/* Reset CSS End */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 970px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 65.37px;
+    text-align: left;
+    color: var(--color-black)
+}
+
+.sub-title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 46.3px;
+    text-align: center;
+    color: var(--color-black);
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.51px;
+    text-align: center;
+    color: var(--color-black);
+}
+
+/* Button style here */
+.button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    width: 180px;
+    height: 44px;
+    padding: auto 16px;
+    gap: 0px;
+    border-radius: 22px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.51px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+
+
+
+
+
+}
+
+/* Header Start */
+.header__nav {
+    border-bottom: 1px solid var(--header-line-color);
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    list-style: none;
+
+}
+
+.header__link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+
+    text-decoration: none;
+    color: var(--header-line-color);
+}
+
+/* Header End */
+.hero {
+    padding-top: 12px;
+}
+
+.hero__title {
+    margin-bottom: 50px;
+}
+
+/* Hero Start */
+
+/* Hero End */
+
+/* About Start */
+.about {
+    background-color: var(--color-grey);
+}
+
+.about__container {
+    max-width: 480px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.about__title {
+    margin-bottom: 50px;
+}
+
+.about__text {
+    margin-bottom: 30px;
+}
+
+/* About End */
+
+/* Skills */
+.skills {
+    /* padding-top: 160px;
+    padding-bottom: 100px; */
+
+    padding: 160px 0 100px;
+}
+
+.skills__title {
+    margin-bottom: 20px;
+}
+
+/* Skills End */
+
+/*Portfolio start*/
+
+.portfolio {
+    background-color: var(--color-grey);
+    padding: 100px 0;
+}
+
+.portfolio__img {
+    margin-bottom: 40px;
+}
+
+.portfolio__tekst {
+    margin-bottom: 70px;
+    text-decoration: underline solid;
+
+
+}
+
+/*Portfolio end*/
+
+/*Footer start*/
+footer {
+    background-color: var(--header-line-color)
+}
+
+.footer__img {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin-bottom: 60px;
+    list-style: none;
+}
+
+.footer__item {
+    width: 40px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer__sub-title {
+    margin-bottom: 20px;
+}
+
+.footer__text {
+    margin-bottom: 60px;
+}
+
+.footer__social {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: var(--header-line-color);
+
+}
+
+/*Footer end*/
+
+.hero__title:hover {
+    font-size: 55px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.footer__item:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 2s;
+}
