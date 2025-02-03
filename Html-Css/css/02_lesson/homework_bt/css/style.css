@@ -6,12 +6,13 @@
     --color-purple: #7a7593;
     --color-lite-purple: #88839e;
     --color-dark-purple: #625e77;
+    --color-red: rgb(147, 46, 46);
 }
 
 /* Reset CSS */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -20,48 +21,31 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Open Sans', sans-serif;
-    align-content: center;
 }
 
-.container {
-    max-width: 793px;
+section {
+    width: 793px;
+    height: 507px;
     margin: 0 auto;
-    border: var(--color-white) 10px;
     background-color: var(--color-grey);
-    align-content: center;
+    border: 10px solid var(--color-white);
 }
 
 .header {
     background-color: var(--color-lite-grey);
     color: var(--color-text);
+    text-align: center;
+    padding: 20px 0;
 }
 
 .title {
     font-size: 24px;
     font-weight: 700;
-    line-height: 28px;
-    text-align: center;
-    width: 100%;
-    height: 28px;
-    top: 19px;
-    left: 247px;
-    gap: 0px;
-    opacity: 0px;
-
 }
 
 .subtitle {
-
     font-size: 16px;
     font-weight: 400;
-    line-height: 18.75px;
-    text-align: center;
-    width: 100%;
-    height: 19px;
-    top: 51px;
-    left: 316px;
-    gap: 0px;
-    opacity: 0px;
 }
 
 .btn {
@@ -69,37 +53,77 @@ body {
     color: var(--color-text);
     width: 534px;
     height: 45px;
-    gap: 0px;
-    opacity: 0px;
-
-    margin: 45px 130px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
 }
+
 
 .box {
     background-color: var(--color-lite-purple);
     color: var(--color-white);
-    margin: 22px 130px 45px 129px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 22px 130px 35px 129px;
+    cursor: pointer;
 }
+
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px;
+    background-color: var(--color-lite-purple);
+    transition: background-color 0.3s, border 0.3s;
+}
+
 
 .form:nth-child(2n) {
     background-color: var(--color-purple);
 }
 
-.form__checkbox {
-    width: 534px;
-    height: 45px;
-    top: 102px;
-    left: 129px;
-    gap: 0px;
-    opacity: 0px;
+
+.form:hover {
+    background-color: var(--color-dark-purple);
+    border: 3px solid var(--color-white);
 }
 
 
+.form:active {
+    background-color: var(--color-red);
+    opacity: 0.6;
+}
 
-.form__item {
+
+.form__checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+label {
     font-size: 18px;
     font-weight: 400;
-    line-height: 21px;
-    text-align: left;
-    padding: 11px 368px 13px 47px;
+}
+
+.checkbox__span {
+    font-size: 11px;
+}
+
+.form__checkbox:checked+label .checkbox__span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn:hover {
+
+    transform: scale(1.1);
+}
+
+.btn:active {
+    background-color: greenyellow;
+    color: #4a4f56;
+    opacity: 0.6;
 }
