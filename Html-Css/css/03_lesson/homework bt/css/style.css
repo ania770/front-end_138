@@ -1,0 +1,17 @@
+:root {
+    --color-white: #fff;
+    --color-orage: #ff9900;
+    --color-black: #2f281e;
+    --color-dark-blue: #173a56;
+    --color-grey: #bcd0e5;
+
+    /*text*/
+
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

@@ -1,0 +1,155 @@
+:root {
+    --color-white: #fff;
+    --color-blue: #3399cc;
+    --color-deep-blue: #2b81ac;
+    --color-green: #339966;
+    --color-lite-blue: #33cccc;
+    --color-purple: #669;
+    --color-lite-blue-green: #699;
+    --colot-deep-pink: #969;
+    --color-lite-green: #9c9;
+    --color-red: #c24747;
+    --color-pink: #c69;
+    --color-orange: #e2674a;
+    --color-yellow: #fc6;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    background-color: var(--color-blue);
+    padding: 131px 137px;
+    border: #2b81ac 25px solid;
+
+
+}
+
+.title {
+    font-size: 21px;
+    line-height: 24.61px;
+    text-align: left;
+    color: var(--color-white);
+    margin-bottom: 38px;
+}
+
+.text,
+.weather,
+.wi {
+    color: #fff;
+    font-size: 22px;
+    line-height: 25.78px;
+    text-align: center;
+    opacity: 0.75;
+}
+
+.box:hover p {
+    opacity: 1;
+    transition: 0.6s;
+
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 18.75px;
+    text-align: left;
+    color: #fff;
+
+}
+
+.box {
+    display: inline-block;
+    height: 147px;
+    border: var(--color-white) 2px solid;
+    margin: -2px;
+    cursor: pointer;
+
+
+}
+
+.box_lisbon {
+    min-width: 50%;
+    background-color: var(--color-blue);
+    padding: 3% 5% 4%;
+
+}
+
+.box_paris {
+    min-width: 25%;
+    background-color: var(--color-lite-blue);
+    padding: 3% 2% 4%;
+
+
+}
+
+.box_belgrade {
+    min-width: 25%;
+    background-color: var(--colot-deep-pink);
+    padding: 3% 2% 4%;
+}
+
+.box_venice {
+    min-width: 25%;
+    background-color: var(--color-red);
+    padding: 3% 2% 4%;
+}
+
+.box_tel-avive {
+    min-width: 25%;
+    background-color: var(--color-orange);
+    padding: 3% 1.5% 4%;
+
+
+}
+
+.box_cair {
+    min-width: 25%;
+    background-color: var(--color-yellow);
+    padding: 3% 2% 4%;
+    border-left: none;
+
+}
+
+.box_new-york {
+    min-width: 25%;
+    background-color: var(--color-lite-green);
+    padding: 3% 1.5% 4%;
+    border-left: none;
+
+}
+
+.box_new-delhi {
+    min-width: 25%;
+    background-color: var(--color-lite-blue-green);
+    padding: 3% 1.5% 4%;
+
+}
+
+.box_san-francisco {
+    min-width: 50%;
+    background-color: var(--color-pink);
+    padding: 3% 5% 4%;
+    border-left: none;
+
+}
+
+.box_tokyo {
+    min-width: 25%;
+    background-color: var(--color-green);
+    padding: 3% 2% 4%;
+    border-left: none;
+
+}
+
+.box_sydney {
+    min-width: 100%;
+    background-color: var(--color-purple);
+    padding: 3% 7% 4%;
+    margin-bottom: 35px;
+
+}
