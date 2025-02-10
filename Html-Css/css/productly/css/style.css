@@ -21,7 +21,7 @@
 }
 
 body {
-    max-width: 1200px;
+    max-width: 1440px;
     font-family: var(--main-font);
     font-size: 16px;
     font-weight: 500;
@@ -113,9 +113,6 @@ body {
 
 /* Header section */
 
-.header {
-    width: 100vw;
-}
 
 .header__content {
     margin-top: 17px;
@@ -156,7 +153,7 @@ body {
 
 /* Hero section */
 .hero {
-    width: 100vw;
+
     padding-top: 70px;
 }
 
@@ -195,7 +192,7 @@ body {
 
 /* Features section */
 .features {
-    width: 100vw;
+    max-width: 1440px;
     padding: 100px 0 75px;
     background-image: url(../img/bg.png);
     background-position: bottom center;
@@ -228,12 +225,10 @@ body {
 /* benefits section */
 
 .benefits {
-    width: 100vw;
-    padding: 100px 120px;
+    padding: 100px;
 }
 
 .benefits__container {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -316,9 +311,8 @@ body {
 }
 
 .create-line {
-    width: 100vw;
+    width: 100%;
     border-top: 1px solid var(--color-border);
-    margin-bottom: 70px;
 }
 
 /* footer */
@@ -328,7 +322,6 @@ body {
     flex-direction: column;
     max-width: 133px;
     white-space: nowrap;
-
 }
 
 .footer__title {
@@ -345,8 +338,7 @@ body {
 }
 
 .footer {
-    width: 100vw;
-    padding: 0 120px 70px;
+    padding: 70px 0;
 }
 
 .footer__container {
@@ -361,6 +353,7 @@ body {
     flex-direction: column;
     max-width: 340px;
     gap: 25px;
+    white-space: wrap;
 }
 
 .footer__button {
