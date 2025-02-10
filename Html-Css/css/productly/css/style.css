@@ -327,11 +327,16 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 133px;
+    white-space: nowrap;
 
 }
 
-.footer__row .h3-title {
+.footer__title {
     margin-bottom: 30px;
+}
+
+.footer__title-last {
+    margin-bottom: 0px;
 }
 
 
