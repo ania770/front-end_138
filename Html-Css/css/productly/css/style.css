@@ -274,6 +274,10 @@ body {
 
 /* product */
 
+.list__item .simple_text {
+    margin-bottom: 0px;
+}
+
 .img-product {
     max-width: 570px;
 }
@@ -282,12 +286,17 @@ body {
     max-width: 505px;
 }
 
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .list__item {
     display: flex;
     justify-content: flex-start;
     gap: 30px;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 
