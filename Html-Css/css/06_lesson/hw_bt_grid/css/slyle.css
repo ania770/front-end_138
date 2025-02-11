@@ -78,7 +78,6 @@ body {
 }
 
 .item:hover {
-    /* как сделать чтобы градиент был снизу, а не справа?? */
     --item-icons-opacity: 0.5;
     --item-gradient: linear-gradient(360deg, #241F24 1%, rgba(91, 91, 91, 0.2) 7%, rgba(187, 186, 192, 0) 12%);
     box-shadow: 0px 0px 30px 0px #00000080;
