@@ -10,11 +10,11 @@
 
 .container {
     margin-bottom: 70px;
+    max-width: 1200px;
 }
 
 .hero {
     align-content: center;
-    max-width: 1200px;
     color: black;
 }
 
