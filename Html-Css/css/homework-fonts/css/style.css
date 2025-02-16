@@ -70,21 +70,21 @@
     line-height: 48px;
     text-transform: uppercase;
     margin-bottom: 40px;
+    width: fit-content;
 }
 
 
 .chapter {
     position: absolute;
-    bottom: 23%;
-    left: 19%;
-    font-family: "Farro", serif;
+    top: -12px;
+    right: -91px;
+    font-family: Farro, serif;
     font-weight: 100;
     font-style: normal;
     font-size: 15px;
-    margin-top: 68px;
 }
 
-.components .chapter {
+/* .components .chapter {
     left: 25%;
 }
 
@@ -94,7 +94,7 @@
 
 .handling .chapter {
     left: 28%;
-}
+} */
 
 
 .text {
