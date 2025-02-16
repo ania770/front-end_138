@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding: 150px 120px 0px;
+}
+
+.container {
+    margin-bottom: 70px;
+}
+
+.hero {
+    align-content: center;
+    max-width: 1200px;
+    color: black;
+}
+
+.title {
+    position: relative;
+    font-family: "Francois One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+
+.chapter {
+    position: absolute;
+    bottom: 23%;
+    left: 19%;
+    font-family: "Farro", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 68px;
+}
+
+.components .chapter {
+    left: 25%;
+}
+
+.fundamentals .chapter {
+    left: 29%;
+}
+
+.handling .chapter {
+    left: 28%;
+}
+
+
+.text {
+    font-family: "PT Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 48px;
+    margin-bottom: 40px;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: Auto;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.background {
+    background-color: #D9D9D9;
+}
