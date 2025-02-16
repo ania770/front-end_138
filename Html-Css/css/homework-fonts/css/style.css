@@ -18,6 +18,49 @@
     color: black;
 }
 
+/* header */
+
+.lang {
+    font-family: "Tourney", serif;
+
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 18px;
+}
+
+.text__nav {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.logo {
+    max-width: 238px;
+}
+
+.nav {
+    max-width: 261px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px auto;
+}
+
+/* hero */
 .title {
     position: relative;
     font-family: "Francois One", serif;
