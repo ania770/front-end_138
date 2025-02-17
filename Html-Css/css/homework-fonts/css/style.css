@@ -6,11 +6,26 @@
 
 .wrapper {
     padding: 150px 120px 0px;
+    background-image: url(../img/bg-picture.png);
+    background-repeat: no-repeat;
+    /* background-size: 760px; */
+    background-size: 700px;
+    /* background-position: right top; */
+    background-attachment: fixed;
+    background-position-y: 138px;
+    background-position-x: 100%;
+
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 385px 1fr;
+    gap: 30px;
 }
 
 .container {
     margin-bottom: 70px;
-    max-width: 1200px;
 }
 
 .hero {
@@ -20,9 +35,31 @@
 
 /* header */
 
+
+.container__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.container__header .content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .lang {
     font-family: "Tourney", serif;
-
     font-weight: 600;
     font-style: normal;
     font-size: 22px;
@@ -42,25 +79,54 @@
 }
 
 .nav {
+    left: 210px;
     max-width: 261px;
     display: flex;
     justify-content: space-between;
 }
 
-.content {
-    display: flex;
-    justify-content: flex-start;
-    gap: 50px;
-}
-
-.container__header {
+.content__item:first-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 17px auto;
+    gap: 30px;
 }
 
+
+/* .container__header .content {
+    
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
+/* aside */
+aside {
+    position: sticky;
+    top: 116px;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    max-width: 385px;
+    gap: 70px;
+}
+
+.menu__item {
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 40px;
+}
+
+.aside .title {
+    margin-bottom: 0px;
+}
+
+
+
 /* hero */
+
 .title {
     position: relative;
     font-family: "Francois One", serif;
@@ -71,6 +137,16 @@
     text-transform: uppercase;
     margin-bottom: 40px;
     width: fit-content;
+}
+
+.hero .title::before {
+    content: '';
+    position: absolute;
+    top: -22%;
+    left: 0;
+    width: 20%;
+    height: 10%;
+    background-color: #000;
 }
 
 
@@ -84,17 +160,6 @@
     font-size: 15px;
 }
 
-/* .components .chapter {
-    left: 25%;
-}
-
-.fundamentals .chapter {
-    left: 29%;
-}
-
-.handling .chapter {
-    left: 28%;
-} */
 
 
 .text {
