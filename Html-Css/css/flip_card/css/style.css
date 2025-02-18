@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+
+.container__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.container__header .content {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.lang {
+    font-family: "Tourney", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 18px;
+}
+
+.text__nav {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.logo {
+    max-width: 238px;
+}
+
+.nav {
+    left: 210px;
+    max-width: 261px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__item:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* hero */
+.container__hero {
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.container__hero-card {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+
+.title {
+    padding-top: 70px;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    padding-left: 120px;
+
+}
+
+.hero .title::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    width: 100px;
+    height: 8px;
+    background-color: #000;
+}
+
+/* flip */
+
+.flip-card-inner {
+    position: relative;
+    width: 270px;
+    height: 180px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 270px;
+    height: 180px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    padding: 15px;
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+}
