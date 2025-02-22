@@ -1,0 +1,34 @@
+@use './variables/color-variables';
+@use './global/main.scss';
+@use './global/buttons.scss';
+@use './variables/media' as *;
+// @use './mixins/bg_decor';
+@use './mixins/bg_decor' as *;
+
+.hero {
+    &__title {
+        color: red;
+
+        &:hover {
+            color: bisque;
+        }
+
+        &::before {
+            content: "12";
+        }
+
+        @media (max-width: $tablet) {
+            color: green;
+        }
+    }
+
+    &__text {
+        background-color: aquamarine;
+    }
+
+
+}
+
+.container {
+    @include bg_decor;
+}
