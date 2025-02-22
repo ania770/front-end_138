@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Francois+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -51,31 +56,29 @@
         </section>
         <section class="main">
             <div class="container container_blog">
-                <h2 class="title title__hero">Blog</h2>
+                <h2 class="title title__blog">Blog</h2>
                 <div class="flex flex__blog">
+                    <div class="text__flex">
+                        <h5 class="small_text small_text__blog">Technology, Interface Design</h5>
+                        <h3 class="subtitle subtitle__blog">Using UX Design to Build a Sustainable Future</h3>
+                        <h5 class="small_text small_text__blog">6 May, 2020</h5>
+                        <p class="text text__blog">Transformation has to be driven by everybody, not just by climate
+                            groups, and we have a responsibility to use our influence to drive this.</p>
+                    </div>
                     <div class="img__flex">
                         <img class="img img__blog" src="./img/image-1.jpg" alt="">
                     </div>
-                    <div class="text__flex">
-                        <h5 class="small_text small_text__blog">Technology, Interface Design</h5>
-                        <h3 class="subtitle subtitle__blog">Using UX Design to Build a Sustainable Future</h3>
-                        <h5 class="small_text small_text__blog">6 May, 2020</h5>
-                        <p class="text text__blog">Transformation has to be driven by everybody, not just by climate
-                            groups, and we have a responsibility to use our influence to drive this.</p>
-                        <img class="arrow arrow__blog" src="./img/Arrow 2.svg" alt="">
-                    </div>
                 </div>
                 <div class="flex flex__blog">
-                    <div class="img__flex">
-                        <img class="img img__blog" src="./img/bg-image.jpg" alt="">
-                    </div>
                     <div class="text__flex">
                         <h5 class="small_text small_text__blog">Technology, Interface Design</h5>
                         <h3 class="subtitle subtitle__blog">Using UX Design to Build a Sustainable Future</h3>
                         <h5 class="small_text small_text__blog">6 May, 2020</h5>
                         <p class="text text__blog">Transformation has to be driven by everybody, not just by climate
                             groups, and we have a responsibility to use our influence to drive this.</p>
-                        <img class="arrow arrow__blog" src="./img/Arrow 2.svg" alt="">
+                    </div>
+                    <div class="img__flex">
+                        <img class="img img__blog" src="./img/image-2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -83,8 +86,7 @@
                 <div class="mini-title_content">
                     <h3 class="mini-title">Latest Posts</h3>
                     <div class="view_content">
-                        <h4 class="view">View</h4>
-                        <img class="arrow" src="./img/Arrow 2.svg" alt="">
+                        <h4 class="small_text">View All</h4>
                     </div>
                 </div>
 
@@ -128,39 +130,41 @@
                 <div class="mini-title_content">
                     <h3 class="mini-title">The Most Popular</h3>
                     <div class="view_content">
-                        <h4 class="view">View</h4>
-                        <img class="arrow" src="./img/Arrow 2.svg" alt="">
+                        <h4 class="small_text">View All</h4>
                     </div>
                 </div>
                 <div class="flex flex__popular">
                     <div class="flex_content">
-                        <img src="./img/image-5.jpg" alt="">
+                        <img class="img img__popular" src="./img/image-5.jpg" alt="">
                         <div class="small_text_content">
                             <h5 class="small_text">Visual Design</h5>
                             <h5 class="small_text">8 June, 2020</h5>
                         </div>
-                        <h3 class="subtitle subtitle__posts">Mentorship Match — How a simple LinkedIn feature can boost
+                        <h3 class="subtitle subtitle__popular">Mentorship Match — How a simple LinkedIn feature can
+                            boost
                             diversity</h3>
-                        <p class="text text__posts">LinkedIn is on a clear mission to make professionals more successful
+                        <p class="text text__popular">LinkedIn is on a clear mission to make professionals more
+                            successful
                             by connecting the global workforce and as we learned — diversity and success go hand in hand
                         </p>
 
                     </div>
 
                     <div class="flex_content">
-                        <img src="./img/Image-6.jpg" alt="">
+                        <img class="img img__popular" src="./img/Image-6.jpg" alt="">
                         <div class="small_text_content">
                             <h5 class="small_text">Visual Design</h5>
                             <h5 class="small_text">8 June, 2020</h5>
                         </div>
-                        <h3 class="subtitle subtitle__posts">Creativity vs. UX</h3>
-                        <p class="text text__posts">Is it possible to create a delightful user experience without
+                        <h3 class="subtitle subtitle__popular">Creativity vs. UX</h3>
+                        <p class="text text__popular">Is it possible to create a delightful user experience without
                             following best UX practices?</p>
-
+                        <p class="text text__popular">UI has to make a huge visual difference between warning, an alert
+                            and a success.</p>
                     </div>
                 </div>
             </div>
-            <div class="button__popular">
+            <div class="button button__popular">
                 <button class="btn">Load More</button>
             </div>
         </section>
@@ -175,6 +179,7 @@
                 <div class="text_content__info text_content__info-right">
                     <p class="text">We work with clients around the world from our headquarters in Charleston, South
                         Carolina.</p>
+                    <br>
                     <p class="text">We focus on naming, branding, brand narratives, website design and development, and
                         brand experiences.</p>
                 </div>
@@ -183,11 +188,12 @@
         <section class="footer">
             <div class="container container__footer">
                 <div class="contact">
-                    <h2 class="title">Need a project?</h2>
-                    <div class="footer__text">
-                        <h4 class="footer_text__content">(239) 555-0108</h4>
-                        <h4 class="footer_text__content">tanya.hill@example.com</h4>
+                    <div class="title title__footer">Need a project?</div>
+                    <div class="footer_text">
+                        <h4 class="footer_text__item">(239) 555-0108</h4>
+                        <h4 class="footer_text__item">tanya.hill@example.com</h4>
                     </div>
+
                 </div>
                 <div class="social_media">
                     <!-- inst -->
@@ -228,9 +234,9 @@
 
 
                 </div>
-                <div class="footer_text__content">
-                    <h4 class="footer_text">© Copyright Manifest Theme.</h4>
-                    <h4 class="footer_text"> Allrights reserved</h4>
+                <div class="footer_text-last">
+                    <h4 class="footer_text-last__item">© Copyright Manifest Theme.</h4>
+                    <h4 class="footer_text-last__item"> Allrights reserved</h4>
                 </div>
             </div>
         </section>
