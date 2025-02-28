@@ -1,0 +1,14 @@
+.img {
+    max-width: 400px;
+    border: 1px solid var($text-color);
+}
+
+.svg__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30px;
+    border: 2px var($svg-color) solid;
+    border-radius: 50px;
+
+}
