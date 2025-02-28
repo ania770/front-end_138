@@ -1,0 +1,14 @@
+@use './color-variables';
+
+.btn {
+    max-width: 118;
+    border: 1px var(--text-color) solid;
+    color: var(--grey-color);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #fff;
+}
