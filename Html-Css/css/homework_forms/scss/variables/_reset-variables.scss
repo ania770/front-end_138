@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-blue: #007BFF;
+    --color-text-info: #969696;
+    --color-subtitle: #545454;
+    --color-title: #1C1C1C;
+}
+
+input {
+    outline: none;
+    border: none;
+}

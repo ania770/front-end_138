@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Francois+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="container container__hero">
+                <h2 class="title title__hero">Create an Account</h2>
+                <div class="content name_content">
+                    <div class="form name__form">
+                        <label for="fname" class="subtitle">First name</label><br>
+                        <input class="input form__fname" type="text" id="fname" name="fname">
+                    </div>
+                    <div class="form name__form">
+                        <label for="lname" class="subtitle">Last name</label><br>
+                        <input class="input form__lname" type="text" id="lname" name="lname">
+                    </div>
+                </div>
+                <div class="content mail_content">
+                    <div class="form mail__form">
+                        <label for="mail" class="subtitle">E-mail</label><br>
+                        <input class="input form__mail" type="text" id="mail" name="mail">
+                        <h3 class="text_info">We'll never share your email with anyone else.</h3>
+                    </div>
+                </div>
+                <div class="content radio_content">
+                    <div class="form radio__form">
+                        <!-- <svg class="svg_1" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="9.5" fill="white" stroke="#E4E4E4" />
+                        </svg>
+                        <svg class="svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="10" fill="#007BFF" />
+                            <circle cx="10" cy="10" r="4" fill="white" />
+                        </svg> -->
+
+                        <input class="input--r form__radio" type="radio" id="male" name="male" value="male">
+                        <label for="male" class="subtitle radio_label">Male</label>
+                    </div>
+                    <div class="form radio__form">
+                        <!-- <svg class="svg_1 svg_1--last" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="9.5" fill="white" stroke="#E4E4E4" />
+                        </svg>
+
+                        <svg class="svg svg--last" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="10" fill="#007BFF" />
+                            <circle cx="10" cy="10" r="4" fill="white" />
+                        </svg> -->
+
+                        <input class="input--r form__radio" type="radio" id="female" name="male" value="female">
+                        <label for="female" class="subtitle radio_label">Female</label>
+                    </div>
+                </div>
+                <div class="content country_content">
+                    <div class="form country__form">
+                        <label for="country" class="subtitle">Country</label><br>
+                        <select class="select" id="country" name="country" required>
+                            <option class="first_value" value="" disabled selected hidden></option>
+                            <option class="text_value" value="usa">USA</option>
+                            <option class="text_value" value="canada">Canada</option>
+                            <option class="text_value" value="poland">Poland</option>
+                            <option class="text_value" value="france">France</option>
+                        </select>
+                        <svg class="svg svg--country" width="14" height="18" viewBox="0 0 14 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0L0 7H14L7 0ZM7 18L0 11H14L7 18Z"
+                                fill="#969696" />
+                        </svg>
+                    </div>
+                    <div class="form country__form">
+                        <label for="city" class="subtitle">City</label><br>
+                        <input class="input form__city" type="city" id="city" name="city">
+                    </div>
+                </div>
+                <button class="button">Sing Up</button>
+                <div class="accept">
+                    <p class="text_info">By clicking the 'Sign Up' button, you confirm that you accept our</p>
+                    <p class="text_info">
+                        <span class="blue-text_info">Terms of Use </span>and
+                        <span class="blue-text_info">Privacy Policy</span>
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="log-in">
+                    <p class="subtitle">Have an account?</p>
+                    <p class="subtitle subtitle--blue">Log In</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
