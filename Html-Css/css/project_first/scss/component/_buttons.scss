@@ -19,6 +19,18 @@
         font-size: 16px;
         padding: 14px 28px;
     }
+
+    &:hover {
+        background-color: var(--color-hover);
+
+        transition: 0.7s;
+    }
+
+    &:active {
+        background-color: var(--color-active);
+        transform: scale(1.1);
+        transition: 0.4s;
+    }
 }
 
 .hero__button {

@@ -77,6 +77,19 @@
 
     .menu_content__item {
         padding: 8px 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #FFFFFF50;
+            transition: 0.7s;
+            border-radius: 10px;
+            transform: scale(1.1);
+        }
+
+        &:active {
+            background-color: var(--border-color);
+            transition: 0.4s;
+        }
     }
 }
 

@@ -19,6 +19,8 @@ li {
   --color-white: #fff;
   --color-green: #006C35;
   --color-green-light: #33895E;
+  --color-hover: #00b259;
+  --color-active: #19e17d;
   --color-green-primary: #E5F0EB;
   --color-gray: #636363;
   --color-gray-9: #000D07;
@@ -181,6 +183,15 @@ li {
     padding: 14px 28px;
   }
 }
+.button:hover {
+  background-color: var(--color-hover);
+  transition: 0.7s;
+}
+.button:active {
+  background-color: var(--color-active);
+  transform: scale(1.1);
+  transition: 0.4s;
+}
 
 .hero__button {
   font-size: 16px;
@@ -260,6 +271,17 @@ li {
 }
 .header .menu_content__item {
   padding: 8px 16px;
+  cursor: pointer;
+}
+.header .menu_content__item:hover {
+  background-color: rgba(255, 255, 255, 0.3137254902);
+  transition: 0.7s;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+.header .menu_content__item:active {
+  background-color: var(--border-color);
+  transition: 0.4s;
 }
 
 @media (min-width: 888px) {
@@ -401,6 +423,16 @@ li {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.list__item:hover {
+  background-color: var(--color-white);
+  transition: 0.7s;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+.list__item:active {
+  background-color: var(--color-green-primary);
+  transition: 0.5s;
 }
 
 .list__item .item__text {
@@ -655,6 +687,11 @@ li {
   .map__img {
     border: none;
   }
+}
+.map__img:hover {
+  border: 2px var(--color-green) solid;
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 .map__img--1 {
   width: 25px;
@@ -961,6 +998,10 @@ li {
   border-radius: 5px;
   padding: 6px 5px;
   z-index: 10;
+}
+.box__green_content:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 @media (min-width: 888px) {
   .box__green_content {

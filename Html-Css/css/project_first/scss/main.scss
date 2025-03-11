@@ -270,6 +270,12 @@
             border: none;
         }
 
+        &:hover {
+            border: 2px var(--color-green) solid;
+            transform: scale(1.1);
+            transition: 0.7s;
+        }
+
         &--1 {
             width: 25px;
             height: 25px;
@@ -592,6 +598,11 @@
     padding: 6px 5px;
     z-index: 10;
 
+    &:hover {
+
+        transform: scale(1.1);
+        transition: 0.7s;
+    }
 
     @media (min-width:$tablet) {
         padding: 11px 15px;
