@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    margin: 10px auto;
+    background-color: #000;
+    max-width: 800px;
+    height: 500px;
+
+}
+
+.container__hero {
+    position: relative;
+}
+
+.text_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 30px;
+    color: aliceblue;
+    max-width: 500px;
+}
+
+.img_planet {
+    max-width: 600px;
+    position: absolute;
+    top: 48px;
+    right: -69px;
+    animation: planet-move 15s 3s infinite;
+}
+
+@keyframes planet-move {
+    0% {
+        transform: translateY(0px);
+
+    }
+
+    50% {
+        transform: translateY(20px);
+        /* top: 60px; */
+    }
+
+    100% {
+        transform: translateY(0px);
+        /* top: 30px; */
+    }
+
+}
+
+.img_content__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: aquamarine;
+    animation: ball-move 3s 3s infinite;
+}
+
+
+
+@keyframes ball-move {
+    0% {
+        transform: translateY(0px);
+
+    }
+
+    50% {
+        transform: translateY(40px);
+        /* top: 60px; */
+    }
+
+    100% {
+        transform: translateY(0px);
+        /* top: 30px; */
+    }
+}

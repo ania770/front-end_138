@@ -1,0 +1,38 @@
+@use '../variables/color-variables' as *;
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 22px;
+    background-color: var(--color-green);
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    @media (min-width:$tablet) {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+}
+
+.hero__button {
+    font-size: 16px;
+    padding: 17px 38px;
+
+    @media (min-width:$tablet) {
+        padding: 19px 41px;
+    }
+}
+
+.freedom__button {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    padding: 14px 31px;
+}

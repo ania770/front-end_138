@@ -1,0 +1,88 @@
+@use '../global/reset' as *;
+
+@use '../variables/color-variables' as *;
+
+@use '../variables/text-variables';
+
+@use '../component/buttons';
+
+.header {
+    background-color: var(--color-green-primary);
+    z-index: 2;
+
+    @media (min-width:$tablet) {
+        background-color: transparent;
+
+        .color_logo {
+            fill: var(--color-white);
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 19px 15px;
+        max-height: 80px;
+    }
+
+    &__menu {
+        display: none;
+
+        @media (min-width:$tablet) {
+            display: block;
+        }
+    }
+
+    &__menu_content {
+        @media (min-width:$tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+    }
+
+    &__button_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+
+    .logo_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+
+        &__img {
+            @media (min-width:$tablet) {
+                width: 38px;
+                height: 40px;
+            }
+        }
+
+        &__text {
+            @media (min-width:$tablet) {
+                width: 149px;
+                height: 23px;
+            }
+        }
+    }
+
+    .menu_content__item {
+        padding: 8px 16px;
+    }
+}
+
+.button_content__hamburger {
+
+    @media (min-width:$tablet) {
+        visibility: hidden;
+    }
+}
