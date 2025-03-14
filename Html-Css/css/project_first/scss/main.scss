@@ -10,6 +10,12 @@
 
 @use './component/buttons';
 
+@use './pages/community';
+
+@use './pages/support';
+
+
+
 // hero
 // .container {
 //     max-width: 375px;
@@ -411,6 +417,14 @@
             flex-direction: row-reverse;
         }
     }
+
+    &__span::before {
+        content: url("./img/svg-before.svg");
+    }
+
+    &__span::after {
+        content: url("./img/svg-after.svg");
+    }
 }
 
 
@@ -810,3 +824,5 @@
         display: none;
     }
 }
+
+//community

@@ -60,6 +60,10 @@
         align-items: center;
         gap: 5px;
 
+        @media (min-width:$tablet) {
+            padding-left: 40px;
+        }
+
         &__img {
             @media (min-width:$tablet) {
                 width: 38px;
@@ -98,4 +102,19 @@
     @media (min-width:$tablet) {
         visibility: hidden;
     }
+}
+
+.community_header {
+    @media (min-width:$tablet) {
+        background-color: var(--color-green-primary);
+        z-index: 2;
+
+        .color_logo--community {
+            fill: var(--color-green);
+        }
+    }
+}
+
+.menu_item__text--community {
+    color: var(--color-gray-9);
 }

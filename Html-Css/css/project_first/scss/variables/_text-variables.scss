@@ -6,6 +6,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    text-decoration: none;
     color: var(--color-white);
 }
 
@@ -110,6 +111,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    text-decoration: none;
     color: var(--color-gray-8);
 }
 
@@ -133,4 +135,131 @@
     font-size: 16px;
     line-height: 24px;
     color: var(--color-gray-8);
+}
+
+
+// community
+.community_hero__text {
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--color-white);
+
+    @media (min-width:$tablet) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+.title_card {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.green_text {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--color-bg-svg);
+
+}
+
+.text_card {
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-text-card);
+
+}
+
+.community_stay__title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--color-black);
+
+    @media (min-width:$tablet) {
+        font-size: 36px;
+        line-height: 60px;
+    }
+}
+
+.community_donate__title {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--color-gray-9);
+}
+
+.community_donate__text {
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-gray-8);
+
+}
+
+.support_hero__subtitle {
+    font-weight: 300;
+}
+
+.breadcrumb__text {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: var(--color-white);
+}
+
+.support_main {
+    &__title {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    &__text {
+        font-family: "Inter";
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        color: var(--color-white);
+    }
+}
+
+.support_get {
+    &__title {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 100%;
+        color: var(--color-gray-9);
+    }
+
+    &__subtitle {
+        font-family: "Inter";
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: var(--color-black);
+    }
+
+    &__text {
+        font-family: "Inter";
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 24px;
+        color: var(--color-text-card);
+    }
 }
