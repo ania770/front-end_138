@@ -27,23 +27,13 @@
 
 
 .hero {
-    &__container {
-        @media (min-width:$tablet) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 11px;
-            margin: 170px auto 0px;
-            max-width: 1200px;
-        }
-
-    }
 
     background-image: url(./img/bg_hero-2.jpg);
     background-size: cover;
     background-position: bottom;
     background-position-x: center;
     height: 651px;
+
 
     @media (min-width:$tablet) {
         height: 800px;
@@ -56,6 +46,19 @@
         padding-top: 80px;
         z-index: -1;
     }
+
+    &__container {
+        @media (min-width:$tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            margin: 170px auto 0px;
+            max-width: 1200px;
+        }
+
+    }
+
 
 
     &__text_content {
@@ -145,6 +148,16 @@
                 top: -45px;
                 left: 191px;
             }
+
+            .maps {
+                width: 117px;
+                height: 224px;
+
+                @media (min-width:$tablet) {
+                    width: 190px;
+                    height: 358px;
+                }
+            }
         }
 
         &--right {
@@ -153,15 +166,15 @@
             transform: rotate(15deg);
         }
 
-        &--center .maps {
-            width: 117px;
-            height: 224px;
+        // &--center .maps {
+        //     width: 117px;
+        //     height: 224px;
 
-            @media (min-width:$tablet) {
-                width: 190px;
-                height: 358px;
-            }
-        }
+        //     @media (min-width:$tablet) {
+        //         width: 190px;
+        //         height: 358px;
+        //     }
+        // }
     }
 
 
