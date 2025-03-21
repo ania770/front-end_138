@@ -22,7 +22,7 @@ let inp_3 = document.querySelector('.inp_3')
 let text_3 = document.querySelector('.text_3')
 let btn_3 = document.querySelector('.btn_3')
 btn_3.onclick = () => {
-    text_3.innerHTML = 'Переметр квадрата:' + ' ' + (4 * +inp_3.value) + ' ' + 'см^2'
+    text_3.innerHTML = 'Переметр квадрата:' + ' ' + (4 * +inp_3.value) + ' ' + 'см'
 }
 
 let inp_4 = document.querySelector('.inp_4')
@@ -30,7 +30,7 @@ const pi = 3.14
 let text_4 = document.querySelector('.text_4')
 let btn_4 = document.querySelector('.btn_4')
 btn_4.onclick = () => {
-    text_4.innerHTML = 'Площадь круга:' + ' ' + (pi * (+inp_4.value * +inp_4.value)) + ' ' + 'см'
+    text_4.innerHTML = 'Площадь круга:' + ' ' + (pi * (+inp_4.value * +inp_4.value)) + ' ' + 'см^2'
 }
 
 
