@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <label for="login">login</label>
+        <input class="login" id="login" type="text">
+        <label for="pass">password</label>
+        <input class="pass" id="pass" type="text">
+        <button class="btn_1">send</button>
+        <div class="out_1"></div>
+
+        <input class="age" type="number" id="age">
+        <button class="btn_2">check</button>
+        <div class="out_2"></div>
+    </div>
+    <script>
+        let setUser = document.querySelector('.login')
+        let pass = document.querySelector('.pass')
+        let btn_1 = document.querySelector('.btn_1')
+        let out_1 = document.querySelector('.out_1')
+        let login = 'admin'
+        let password = '123'
+        btn_1.onclick = () => {
+            if (setUser.value === login && pass.value == password) {
+                out_1.innerHTML = `Hello ${setUser.value}!`;
+            }
+            else if (setUser.value !== login && pass.value !== password) {
+                out_1.innerHTML = `eror`;
+            }
+            else if (setUser.value !== login) {
+                out_1.innerHTML = `Неверный логин`;
+            }
+
+            else if (pass.value !== password) {
+                out_1.innerHTML = `Неверный пароль`;
+            }
+
+            // else {
+            //     out_1.innerHTML = `eror`;
+            // }
+
+        }
+
+
+        //task 2
+        let age = document.querySelector('.age')
+        let btn_2 = document.querySelector('.btn_2')
+        let out_2 = document.querySelector('.out_2')
+        btn_2.onclick = () => {
+            if (+age.value > 18 && +age.value < 25) {
+                out_2.innerHTML = `придатний 1`;
+            }
+            else if (+age.value > 25 && +age.value < 60) {
+                out_2.innerHTML = `придатний 2`;
+            }
+            else {
+                out_2.innerHTML = `не придатний`;
+            }
+
+        }
+
+        //task 3
+        // let item = 'Iphone'
+
+        // switch (item) {
+        //     case 'Iphone':
+        //         console.log('Iphone: 1300$')
+        //         break;
+        //     case 'Samsung':
+        //         console.log('Samsung: 1000$')
+        //         break;
+        //     default:
+        //         console.log('Немає в наявності')
+        // }
+
+        let a = 2;
+        let b = 4;
+
+        let resSimbol = '+'
+        switch (resSimbol) {
+            case '*':
+                res = a * b;
+                break;
+            case '-':
+                res = a - b;
+                break;
+            case '+':
+                res = a + b;
+                break;
+            case '/':
+                res = a / b;
+                break;
+        }
+        console.log(res)
+
+        // a * b = res
+        // в resSimbol я можу підставити "*" "-" "/" "+"
+
+
+    </script>
+
+</body>
+
+</html>
