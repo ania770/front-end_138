@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <div class="calc">
+        <input class="inp1" type="number">
+        <select class="select">
+            <option value="*">Множити</option>
+            <option value="+">Додавати</option>
+            <option value="-">Віднімати</option>
+        </select>
+        <input class="inp2" type="number">
+        <button class="btn">Res</button>
+    </div>
+
+    <h4 class="out">
+        0
+    </h4> -->
+    <div class="test">
+        Вивід Гравців
+        <select class="sel">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+        <button class="btn">Show</button>
+    </div>
+
+
+    <ul class="out2">
+    </ul>
+    <script>
+        // let inp1 = document.querySelector('.inp1')
+        // let inp2 = document.querySelector('.inp2')
+        // let select = document.querySelector('.select')
+        // let btn = document.querySelector('.btn')
+        // let out = document.querySelector('.out')
+
+
+
+        // btn.onclick = () => {
+        //     console.log(select.value);
+        //     if (select.value === '*') {
+        //         multi(inp1.value, inp2.value)
+        //     } else if (select.value === '+') {
+        //         plus(inp1.value, inp2.value)
+        //     } else if (select.value === '-') {
+        //         minus(inp1.value, inp2.value)
+        //     } else { console.log('error') }
+        // }
+
+
+        // function plus(num, num2) {
+        //     out.innerHTML = +num + +num2;
+        // }
+
+        // function minus(num, num2) {
+        //     out.innerHTML = +num - +num2;
+        // }
+
+        // function multi(num, num2) {
+        //     out.innerHTML = +num * +num2;
+        // }
+
+
+        let out2 = document.querySelector('.out2')
+        let btn = document.querySelector('.btn')
+        let select = document.querySelector('.sel')
+
+        function setName(name) {
+            return `<li>${name}</li>`
+        }
+        btn.onclick = () => {
+            out2.innerHTML = ''
+            for (let i = 0; i < +select.value; i++) {
+                out2.innerHTML += setName('sasha')
+            }
+        }
+    </script>
+</body>
+
+</html>

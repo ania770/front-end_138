@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h2>Shop</h2>
+        <div class="out">
+
+        </div>
+    </div>
+    <script>
+        // let array2 = ['Apple', 'Sasha', 'Apple', 'Sasha', 'Apple', 'Sasha', 'Apple', 'Sasha']
+        // array2.map((item, i) => {
+        //     if (item === 'Sasha') {
+        //         console.log(item + ' ' + i)
+        //     }
+        // })
+        // let device = [
+        //     {
+        //         brend: 'Apple',
+        //         price: 1300
+        //     },
+        //     {
+        //         brend: 'Samsung',
+        //         price: 1000
+        //     },
+        //     {
+        //         brend: 'Huawai',
+        //         price: 900
+        //     },
+        // ]
+        // device.map((item) => {
+        //     console.log(item.brend + item.price)
+        // })
+
+
+        // Завдання 
+        // Вивести в Консоль
+        // Huawai Ціна: 900 usd
+        let out = document.querySelector('.out')
+        let device2 = [
+            {
+                img: 'https://content2.rozetka.com.ua/goods/images/big_tile/417144147.jpg',
+                brend: 'Apple',
+                price: 1300
+            },
+            {
+                img: 'https://content.rozetka.com.ua/goods/images/big_tile/405186085.jpg',
+                brend: 'Samsung',
+                price: 1000
+            },
+            {
+                img: 'https://content2.rozetka.com.ua/goods/images/big_tile/501173237.jpg',
+                brend: 'Huawai',
+                price: 900
+            },
+        ]
+        device2.map(item => {
+            out.innerHTML += `  <div class="item">
+    <img src="${item.img}" alt="">
+   <h3>${item.brend}</h3>
+    <p>${item.price} USD</p>
+    <button>buy</button>
+  </div>`
+        })
+
+    </script>
+</body>
+
+</html>

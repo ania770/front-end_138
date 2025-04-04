@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-position: 100%;
+    background: radial-gradient(circle, rgba(255, 156, 215, 1) 0%, rgba(108, 234, 251, 1) 100%);
+    padding-top: 30px;
+}
+
+.hero {
+    max-width: 1200px;
+}
+
+img {
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.out {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.item {
+    background-size: 200% 200%;
+    transition: background-position 1s ease-in-out;
+    background: linear-gradient(0deg, rgba(255, 88, 129, 1) 0%, rgba(255, 110, 110, 1) 50%, rgba(255, 255, 120, 1) 100%);
+    padding: 20px 10px;
+    border-radius: 20px;
+}
+
+
+.item:hover {
+    transform: scale(1.015);
+    transition: 0.5s;
+}
+
+.div_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+    background-color: #ffe7fe;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.select {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+
+}
+
+.input {
+    border: none;
+    border-radius: 20px;
+    max-width: 100px;
+    padding: 10px;
+}
+
+.btn {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #b4ff6e;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.btn:active {
+    background-color: #60d532;
+    transition: 0.5s;
+}
+
+.btn_reset {
+    background-color: #f97373;
+}
+
+.btn_reset:active {
+    background-color: #db4040;
+    transition: 0.5s;
+}
+
+.item_name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.item_age {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.item_btn {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+}
+
+.btn_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
