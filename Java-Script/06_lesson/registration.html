@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input class="inp1" type="text" placeholder="login"><br>
+    <input class="inp2" type="password" placeholder="password"><br>
+    <button class="btn">Registration</button> -->
+    <input class="name" type="text" placeholder="name"><br>
+    <input class="age" type="number" placeholder="age"><br>
+    <button class="btn">add</button>
+    <script>
+        // let inp = document.querySelector('.inp1')
+        // let inp2 = document.querySelector('.inp2')
+        // let btn = document.querySelector('.btn')
+
+        // let users = []
+        // btn.onclick = () => {
+        //     users.push({
+        //         name
+        //     })
+        // }
+
+        let btn = document.querySelector('.btn')
+        let name = document.querySelector('.name')
+        let age = document.querySelector('.age')
+        let users = []
+
+        // let user = {
+        //     name: name.value,
+        //     age: age.value
+        // }
+        btn.onclick = () => {
+            let user = {
+                name: name.value,
+                age: age.value
+            };
+            // users.push(user)
+            // users.push({
+            //     name: "sasha",
+            //     age: 22
+            // })
+            users.push(user);
+        }
+
+        console.log(users);
+
+
+    </script>
+</body>
+
+</html>

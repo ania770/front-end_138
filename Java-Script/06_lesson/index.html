@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <select class="sel">
+        <option value="User1">use 1</option>
+        <option value="User2">use 2</option>
+        <option value="User3">use 3</option>
+    </select>
+    <button class="btn">search</button>
+
+    <script>
+        let arr = ["User1", "User2", "User3"]
+        let btn = document.querySelector(".btn");
+        let sel = document.querySelector(".sel");
+        btn.onclick = () => {
+            arr.map(item => {
+                if (item === sel.value) {
+                    console.log(item)
+                }
+            })
+        }
+
+    </script> -->
+    <select class="sel">
+    </select>
+    <button class="btn">search</button>
+
+    <script>
+        let arr = ["User1", "User2", "User3", "User4", "User5"]
+
+        let btn = document.querySelector(".btn");
+        let sel = document.querySelector(".sel");
+        arr.map(item => {
+            sel.innerHTML += `<option value="${item}">${item}</option>`
+        })
+
+    </script>
+</body>
+
+</html>
