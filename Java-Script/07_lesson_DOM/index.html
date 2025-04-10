@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h2>DOM</h2>
+    <button>test</button>
+    <button class="test">test</button>
+    <button id="test">test</button>
+    <div class="out"></div> -->
+    <button class="btn">add user</button>
+    <div class="out"></div>
+
+    <div class="out2">
+
+    </div>
+    <button class="btn2">add</button>
+
+    <script>
+
+        let btn = document.querySelector('.btn')
+        let out = document.querySelector('.out')
+        let btn2 = document.querySelector('.btn2')
+        let out2 = document.querySelector('.out2')
+
+
+        // let user = true
+
+        // btn2.onclick = () => {
+        //     if (user) {
+        //         out2.append(creatTtitle('Hello Sasha', 'green'))
+        //     } else {
+        //         out2.append(creatTtitle('NOt Regisrt', 'red'))
+        //     }
+
+        // }
+
+        function creatTtitle(text, isLogin) {
+            let h2 = document.createElement('h2')
+            // let active = ''
+
+            // if (isLogin) {
+            //     active = 'green'
+            // } else {
+            //     active = 'red'
+            // }
+            // h2.classList.add('title', active)
+            h2.innerHTML = text ? text : 'error'
+            h2.classList.add('title', isLogin ? 'green' : 'red')
+            return h2
+        }
+
+
+        let users2 = ['Sveta', 'Sasha', 'Olha', 'Kolya'];
+        // users2.map(item => out.append(creatTtitle(item)))
+
+        let users3 = [
+            {
+                name: 'Sveta',
+                isLogin: true
+            },
+            {
+                name: 'Sasha',
+                isLogin: false
+            },
+            {
+                name: 'Olha',
+                isLogin: false
+            },
+            {
+                name: 'Kolya',
+                isLogin: true
+            },
+            {
+                name: 'Alex',
+                isLogin: false
+            }
+        ]
+
+        users3.map(item => {
+            out.append(creatTtitle(item.name, item.isLogin))
+        })
+
+        // let user = false
+        // btn2.onclick = () => {
+        //     if (user) {
+        //         out2.append(createTitle('hello'))
+        //     } else {
+        //         out2.append(createTitle('error'))
+        //     }
+        // }
+        // // btn.onclick = () => {
+        // //     let h2 = document.createElement('h2')
+
+        // //     h2.classList.add('title')
+        // //     h2.innerHTML = 'test'
+
+        // //     out.append(h2)
+        // // }
+        // function createTitle(text) {
+        //     //в функции можно закидывать переменные
+        //     let h2 = document.createElement('h2')
+        //     h2.classList.add('title')
+        //     h2.innerHTML = 'test'
+
+        //     return (h2)
+        // }
+
+
+
+        //         //классы
+
+        //         btn.classList.add('active')
+        //         btn.classList.remove('active')
+        //         btn.classList.toggle('active')
+        //         //стили
+
+        //         //дата и атрибуты
+        //         btn.setAttribute('data', 'test')
+        //         btn.setAttribute('data')
+
+        //         //находить контент
+        //         btn.innerHTML
+        //         console.log(btn.innerHTML)
+
+        //         //создание элементов
+        //         let out = document.querySelector('.out')
+        //         //old
+        //         // out.innerHTML += `
+        //         // <li>test</li>
+        //         // `
+        // let button = document.createElement('button')
+        // out.append(button)
+
+    </script>
+</body>
+
+</html>

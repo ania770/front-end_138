@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            text-decoration: line-through;
+        }
+
+        li {
+            display: flex;
+
+            gap: 15px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        .edit_emogy.animate {
+            animation: move 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>To do List</h2>
+    <input class="inp" type="text">
+    <button class="btn">add</button>
+    <ol class="out">
+        <!-- <li></li> -->
+
+    </ol>
+    <span>to do:</span>
+    <b class="count">0</b>
+
+
+    <script>
+        let inp = document.querySelector('.inp')
+        let btn = document.querySelector('.btn')
+        let out = document.querySelector('.out')
+        let count = document.querySelector('.count')
+
+
+        let countNum = 0
+        window.addEventListener('keyup', function (event) {
+            if (event.code === 'Enter' && inp.value) {
+                out.append(createLi(inp.value))
+                count.innerHTML = ++countNum
+                inp.value = ''
+            }
+        })
+
+        btn.addEventListener('click', () => {
+            if (inp.value) {
+                out.append(createLi(inp.value))
+                count.innerHTML = ++countNum
+            } else {
+                console.log('error input');
+
+            }
+            inp.value = ''
+        })
+
+        function createLi(value) {
+            let li = document.createElement('li')
+            li.classList.add('list__item')
+
+            const check = document.createElement('input')
+            check.type = 'checkbox'
+            check.addEventListener('change', () => {
+                if (check.checked) {
+                    text.classList.add('red')
+                    count.innerHTML = --countNum
+                } else {
+                    text.classList.remove('red')
+                    count.innerHTML = ++countNum
+                }
+            })
+
+
+
+
+            const text = document.createElement('span')
+            text.innerHTML = value
+            text.setAttribute('contenteditable', 'true')
+
+
+
+            const delBtn = document.createElement('span')
+            delBtn.innerHTML = '❌'
+            delBtn.addEventListener('click', () => {
+                if (check.checked) {
+                    li.remove()
+                } else {
+                    li.remove()
+                    count.innerHTML = --countNum
+                }
+            })
+
+
+            const editBtn = document.createElement('span')
+            editBtn.classList.add('edit_emogy')
+            editBtn.innerHTML = '✏️'
+
+
+            let textDiv = document.createElement('div')
+            textDiv.classList.add('text_div')
+            text.addEventListener('input', () => {
+                editBtn.classList.add('animate')
+
+                setTimeout(() => {
+                    editBtn.classList.remove('animate');
+                }, 1000);
+            });
+
+
+            textDiv.append(text)
+
+
+            li.append(check, textDiv, editBtn, delBtn)
+            return li
+        }
+        // if (inp.value) {
+        //     let li = document.createElement('li')
+        //     li.innerHTML = inp.value
+
+        //     const check = document.createElement('input')
+        //     check.type = 'checkbox'
+
+
+
+
+        //     out.append(li)
+        //     count.innerHTML = ++countNum
+        //     }
+        //     // count.innerHTML = out.querySelectorAll('li').length
+
+        //     inp.value = ''
+        // }
+
+    </script>
+</body>
+
+</html>

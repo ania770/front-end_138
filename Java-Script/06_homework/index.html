@@ -113,6 +113,12 @@
         let arr = []
         btn.onclick = () => {
             if (name.value && age.value && email.value && phone.value && pas1.value === pas2.value) {
+                let isExist = arr.some(user => user.email === email.value);
+                if (isExist) {
+                    info.innerHTML = `<p class="info_text" style="color:red;">Такий користувач вже існує</p>`;
+                    return;
+                }
+
                 let user = {
                     name: name.value,
                     age: age.value,
@@ -123,6 +129,15 @@
                 };
 
                 arr.push(user);
+
+                name.value = ''
+                age.value = ''
+                email.value = ''
+                phone.value = ''
+                sel.value = 'none'
+                pas1.value = ''
+                pas2.value = ''
+                userOut.innerHTML = arr.length
             }
             else {
                 info.innerHTML = `<p class="info_text">Введите данные</p>`
@@ -140,7 +155,7 @@
             out.innerHTML = "";
 
             arr.forEach(user => {
-                let avatar = 'none.avatar';
+                let avatar = 'none.jpg';
                 if (user.gender === 'man') avatar = 'man.jpg';
                 if (user.gender === 'woman') avatar = 'woman.jpg';
 

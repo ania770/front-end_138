@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- counter  -->
+    <button class="btn-minus">-</button>
+    <span class="out">0</span>
+    <button class="btn-plus">+</button>
+
+    <script>
+
+        let btnMinus = document.querySelector('.btn-minus')
+        let btnPlus = document.querySelector('.btn-plus')
+        let out = document.querySelector('.out')
+
+        let num = 0
+
+        btnPlus.onclick = () => {
+            out.innerHTML = num++
+
+        }
+        btnMinus.onclick = () => {
+            if (num >= 0) {
+                out.innerHTML = num--
+            }
+        }
+    </script>
+</body>
+
+</html>
