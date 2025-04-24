@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .light {
+            --text-color: #000;
+            --bg-color: #fff;
+        }
+
+        .dark {
+            --text-color: #fff;
+            --bg-color: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+
+            background-color: var(--bg-color);
+        }
+
+        header {
+            background-color: aqua;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        main {
+            color: var(--text-color);
+            padding: 40px 16px;
+        }
+
+        p {
+            padding: 16px 0 40px;
+        }
+
+        .box {
+            border-radius: 10px;
+            width: 80px;
+            height: 30px;
+            background-color: bisque;
+            cursor: pointer;
+
+        }
+
+        .box__item {
+            width: 30px;
+            border-radius: 30px;
+            height: 30px;
+            background-color: rgb(0, 248, 33);
+            transition: 0.5s;
+        }
+
+        .box--active {
+            margin-left: 50px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>logo</span>
+        <span>Menu <button class="btn">Serch all title</button></span>
+        <div class="box ">
+            <div class="box__item"></div>
+        </div>
+    </header>
+
+    <main>
+        <h2>По натисканю serch title до тайтлів додати index</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odit sint illo soluta minus voluptatibus
+            eligendi nulla ut sed voluptatem eum quis facilis, eos debitis unde sunt earum temporibus porro nobis! Qui
+            magnam quae veritatis labore nesciunt aspernatur cumque sed, molestias ipsa atque culpa! Corporis nemo minus
+            debitis! Aliquam accusamus officiis, nulla rem sit adipisci blanditiis corporis id dolor, distinctio
+            obcaecati quidem autem doloremque quae a necessitatibus itaque voluptatem atque magni nam, magnam officia
+            repudiandae. Similique velit facilis nam, fugit assumenda, perspiciatis maxime sint modi labore, illum
+            soluta dolorem excepturi eveniet? Accusamus ad facilis, voluptas nihil repellat laborum. Repellat, rerum!
+        </p>
+        <h2>Test Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odit sint illo soluta minus voluptatibus
+            eligendi nulla ut sed voluptatem eum quis facilis, eos debitis unde sunt earum temporibus porro nobis! Qui
+            magnam quae veritatis labore nesciunt aspernatur cumque sed, molestias ipsa atque culpa! Corporis nemo minus
+            debitis! Aliquam accusamus officiis, nulla rem sit adipisci blanditiis corporis id dolor, distinctio
+            obcaecati quidem autem doloremque quae a necessitatibus itaque voluptatem atque magni nam, magnam officia
+            repudiandae. Similique velit facilis nam, fugit assumenda, perspiciatis maxime sint modi labore, illum
+            soluta dolorem excepturi eveniet? Accusamus ad facilis, voluptas nihil repellat laborum. Repellat, rerum!
+        </p>
+        <h2>Test Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odit sint illo soluta minus voluptatibus
+            eligendi nulla ut sed voluptatem eum quis facilis, eos debitis unde sunt earum temporibus porro nobis! Qui
+            magnam quae veritatis labore nesciunt aspernatur cumque sed, molestias ipsa atque culpa! Corporis nemo minus
+            debitis! Aliquam accusamus officiis, nulla rem sit adipisci blanditiis corporis id dolor, distinctio
+            obcaecati quidem autem doloremque quae a necessitatibus itaque voluptatem atque magni nam, magnam officia
+            repudiandae. Similique velit facilis nam, fugit assumenda, perspiciatis maxime sint modi labore, illum
+            soluta dolorem excepturi eveniet? Accusamus ad facilis, voluptas nihil repellat laborum. Repellat, rerum!
+        </p>
+        <h2>Test Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odit sint illo soluta minus voluptatibus
+            eligendi nulla ut sed voluptatem eum quis facilis, eos debitis unde sunt earum temporibus porro nobis! Qui
+            magnam quae veritatis labore nesciunt aspernatur cumque sed, molestias ipsa atque culpa! Corporis nemo minus
+            debitis! Aliquam accusamus officiis, nulla rem sit adipisci blanditiis corporis id dolor, distinctio
+            obcaecati quidem autem doloremque quae a necessitatibus itaque voluptatem atque magni nam, magnam officia
+            repudiandae. Similique velit facilis nam, fugit assumenda, perspiciatis maxime sint modi labore, illum
+            soluta dolorem excepturi eveniet? Accusamus ad facilis, voluptas nihil repellat laborum. Repellat, rerum!
+        </p>
+        <h2>Test Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odit sint illo soluta minus voluptatibus
+            eligendi nulla ut sed voluptatem eum quis facilis, eos debitis unde sunt earum temporibus porro nobis! Qui
+            magnam quae veritatis labore nesciunt aspernatur cumque sed, molestias ipsa atque culpa! Corporis nemo minus
+            debitis! Aliquam accusamus officiis, nulla rem sit adipisci blanditiis corporis id dolor, distinctio
+            obcaecati quidem autem doloremque quae a necessitatibus itaque voluptatem atque magni nam, magnam officia
+            repudiandae. Similique velit facilis nam, fugit assumenda, perspiciatis maxime sint modi labore, illum
+            soluta dolorem excepturi eveniet? Accusamus ad facilis, voluptas nihil repellat laborum. Repellat, rerum!
+        </p>
+        <h2>Test Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odit sint illo soluta minus voluptatibus
+            eligendi nulla ut sed voluptatem eum quis facilis, eos debitis unde sunt earum temporibus porro nobis! Qui
+            magnam quae veritatis labore nesciunt aspernatur cumque sed, molestias ipsa atque culpa! Corporis nemo minus
+            debitis! Aliquam accusamus officiis, nulla rem sit adipisci blanditiis corporis id dolor, distinctio
+            obcaecati quidem autem doloremque quae a necessitatibus itaque voluptatem atque magni nam, magnam officia
+            repudiandae. Similique velit facilis nam, fugit assumenda, perspiciatis maxime sint modi labore, illum
+            soluta dolorem excepturi eveniet? Accusamus ad facilis, voluptas nihil repellat laborum. Repellat, rerum!
+        </p>
+        <h2>Test Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odit sint illo soluta minus voluptatibus
+            eligendi nulla ut sed voluptatem eum quis facilis, eos debitis unde sunt earum temporibus porro nobis! Qui
+            magnam quae veritatis labore nesciunt aspernatur cumque sed, molestias ipsa atque culpa! Corporis nemo minus
+            debitis! Aliquam accusamus officiis, nulla rem sit adipisci blanditiis corporis id dolor, distinctio
+            obcaecati quidem autem doloremque quae a necessitatibus itaque voluptatem atque magni nam, magnam officia
+            repudiandae. Similique velit facilis nam, fugit assumenda, perspiciatis maxime sint modi labore, illum
+            soluta dolorem excepturi eveniet? Accusamus ad facilis, voluptas nihil repellat laborum. Repellat, rerum!
+        </p>
+    </main>
+
+    <script>
+        let box = document.querySelector('.box')
+        let boxItem = document.querySelector('.box__item')
+        let body = document.querySelector('body')
+
+
+        box.addEventListener('click', () => {
+            boxItem.classList.toggle('box--active')
+
+            body.classList.toggle('dark')
+        })
+
+        let btn = document.querySelector('.btn')
+
+
+        function indexAdd() {
+            let title = document.querySelectorAll('h2')
+            title.forEach((item, index) => {
+                item.innerHTML += index + 1
+            })
+        }
+        btn.onclick = indexAdd;
+
+
+
+    </script>
+</body>
+
+</html>

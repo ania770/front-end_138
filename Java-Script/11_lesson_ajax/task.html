@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="search_content">
+        <select class="sel" id="sel"></select>
+        <input class="search" type="text" placeholder="Поиск по имени...">
+    </div>
+
+    <div class="out">
+    </div>
+
+    <div class="pages">
+
+    </div>
+    <button class="btn-next">Next</button>
+
+    <script>
+
+        let out = document.querySelector('.out')
+        let next = document.querySelector('.btn-next')
+        let pagesButton = document.querySelector('.pages')
+        let sel = document.querySelector('.sel')
+        let pages = 1
+        let allCharacters = []
+        let search = document.querySelector('.search')
+
+        useApi(pages) //вызовы ф-ций
+
+        //клик...
+        next.addEventListener('click', () => {
+            useApi(++pages)
+        })
+
+        sel.addEventListener('change', () => {
+            let selectedSpecies = sel.value
+
+            if (selectedSpecies === 'all') {
+                listItem(allCharacters)
+            } else {
+                let filtered = allCharacters.filter(item => item.species === selectedSpecies)
+                listItem(filtered)
+            }
+        })
+
+        search.addEventListener('input', () => {
+            let searchText = search.value.toLowerCase()
+            let filtered = allCharacters.filter(item => item.name.toLowerCase().includes(searchText))
+            listItem(filtered)
+        })
+
+        function useApi(num) {
+            fetch(`https://rickandmortyapi.com/api/character/?page=${num}`)
+                .then(data => data.json())
+                .then(data => {
+                    createButton(data.info.pages)//создаем кнопки
+
+                    listItem(data.results)
+                    allCharacters = data.results
+                    sortSpecies(allCharacters)
+                })
+                .catch(error => console.error(error))
+
+        }
+
+
+        function listItem(user) {
+            console.log(user);
+
+            out.innerHTML = ''
+            user.map(item => out.append(createUser(item)))
+        }
+
+
+        function createUser(user) {
+            let item = document.createElement('div')
+            item.classList.add('item')
+
+            let img = document.createElement('img')
+            img.src = user.image
+            img.alt = user.name
+            img.width = '200'
+
+            let h3 = document.createElement('h3')
+            h3.innerHTML = user.name
+
+            let ul = document.createElement('ul')
+
+            let species = document.createElement('li')
+            species.innerHTML = `Раса: ${user.species}`
+
+            let status = document.createElement('li')
+            status.innerHTML = `Стан: ${user.status}`
+
+            ul.append(species, status)
+            item.append(img, h3, ul)
+
+            cardColor(user, item)
+
+
+
+            item.addEventListener('click', () => {
+                singleItem(user)
+            })
+
+            return item
+
+        }
+
+        function cardColor(user, item) {
+            if (user.status.toLowerCase() == 'dead') {
+                item.classList.add('border_black')
+            } else if (user.status == 'unknown') {
+                item.classList.add('border_gray')
+            } else {
+                item.classList.add('border_green')
+            }
+        }
+
+        function createButton(num) {
+            pagesButton.innerHTML = ''
+            for (let i = 1; i <= num; i++) {
+                let button = document.createElement('button')
+                button.classList.add('btn')
+                button.innerHTML = i
+                button.dataset.page = i
+                if (i === pages) {
+                    button.classList.add('active')
+                }
+
+                button.addEventListener('click', () => {
+                    pages = i
+                    useApi(pages)
+                })
+
+                button.addEventListener('click', () => useApi(i))
+                pagesButton.append(button)
+            }
+
+        }
+
+        function sortSpecies(characters) {
+            let selectSpecies = ['all', ...new Set(characters.map(item => item.species))]
+
+            sel.innerHTML = ''
+            selectSpecies.map(item => {
+                let option = document.createElement('option')
+                option.classList.add('item__option')
+                option.value = item
+                option.innerHTML = item
+                sel.append(option)
+            })
+
+        }
+
+
+        function singleItem(user) {
+            out.innerHTML = ''
+
+            let item = document.createElement('div')
+            item.classList.add('item_single')
+
+            cardColor(user, item)
+
+            let img = document.createElement('img')
+            img.src = user.image
+            img.alt = user.name
+            img.width = 250
+
+            let h2 = document.createElement('h2')
+            h2.textContent = user.name
+
+            let ul = document.createElement('ul')
+            ul.innerHTML = `
+               <li><b>Статус:</b> ${user.status}</li>
+        <li><b>Раса:</b> ${user.species}</li>
+        <li><b>Пол:</b> ${user.gender}</li>
+        <li><b>Локация:</b> ${user.location.name}</li>
+        <li><b>Происхождение:</b> ${user.origin.name}</li>
+            `
+
+            let backBtn = document.createElement('button')
+            backBtn.classList.add('back_btn')
+            backBtn.textContent = 'Назад'
+            backBtn.addEventListener('click', () => {
+                listItem(allCharacters)
+            })
+
+
+            item.append(img, h2, ul, backBtn)
+            out.append(item)
+        }
+
+    </script>
+</body>
+
+</html>

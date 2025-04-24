@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .container__hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .text_content {
+            max-width: 380px;
+        }
+
+        .img_content {
+            width: 688px;
+            overflow: hidden;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            overflow: visible;
+        }
+
+        .swiper-wrapper {
+            overflow: visible;
+
+        }
+
+        .swiper-slide {
+
+            width: 250px;
+            height: 250px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="container container__hero">
+                <div class="text_content">
+                    <h1 class="title">Virkelig kvalitetsvalg</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus omnis
+                        consectetur laudantium maxime est accusamus!</p>
+                    <button class="btn">Se mer</button>
+                </div>
+                <div class="img_content">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        let swiperWrapper = document.querySelector('.swiper-wrapper')
+
+
+        function useApi() {
+            fetch(`https://rickandmortyapi.com/api/character/?page=2`)
+                .then(data => data.json())
+                .then(data => {
+
+                    listItem(data.results)
+                    var swiper = new Swiper(".mySwiper", {
+                        effect: "coverflow",
+                        grabCursor: true,
+                        centeredSlides: true,
+                        slidesPerView: "auto",
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                            loop: true,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                })
+                .catch(error => console.log('error'))
+
+        }
+        useApi()
+
+        function listItem(user) {
+            swiperWrapper.innerHTML = ''
+            user.map(item => {
+                const slide = createUser(item);
+                swiperWrapper.appendChild(slide);
+            })
+        }
+
+        function createUser(user) {
+
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+
+
+            const imgWrapper = document.createElement('div');
+            imgWrapper.classList.add('img-wrapper');
+
+
+            const img = document.createElement('img');
+            img.src = user.image;
+            img.alt = user.name;
+            img.width = 200;
+
+            imgWrapper.appendChild(img);
+            slide.appendChild(imgWrapper);
+
+
+            return slide;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

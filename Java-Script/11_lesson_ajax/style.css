@@ -1,0 +1,96 @@
+ * {
+     padding: 0;
+     margin: 0 auto;
+     box-sizing: border-box;
+     font-family: sans-serif;
+ }
+
+ li {
+     list-style-type: none;
+ }
+
+ .out {
+     max-width: 1000px;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+     margin-bottom: 30px;
+ }
+
+ .btn {
+     width: 30px;
+     margin: 2px;
+     cursor: pointer;
+ }
+
+ button.active {
+     background-color: #4caf50;
+     color: white;
+     font-weight: bold;
+     border: 2px solid #2e7d32;
+ }
+
+ img {
+     border-radius: 10px;
+ }
+
+ .item {
+     padding: 10px 20px;
+     border: 1px solid;
+     border-radius: 10px;
+     cursor: pointer;
+ }
+
+ .border_black {
+     border: 2px solid #000;
+     background-color: #00000050;
+ }
+
+ .border_gray {
+     border: 2px solid #747474;
+     background-color: #74747451;
+ }
+
+ .border_green {
+     border: 2px solid green;
+     background-color: rgba(0, 128, 0, 0.458);
+ }
+
+ .sel {
+     max-width: 150px;
+     padding: 10px 15px;
+     border-radius: 10px;
+
+ }
+
+ .search_content {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     max-width: 400px;
+     margin: 20px auto;
+ }
+
+ .search {
+     max-width: 200px;
+     padding: 10px 15px;
+     border-radius: 10px;
+ }
+
+ .item_single {
+
+     padding: 20px;
+     border-radius: 10px;
+     max-width: 400px;
+     margin: 20px auto;
+     text-align: center;
+ }
+
+ .back_btn {
+     margin-top: 20px;
+     padding: 10px 15px;
+     cursor: pointer;
+     background-color: greenyellow;
+     border: none;
+     border-radius: 10px;
+ }

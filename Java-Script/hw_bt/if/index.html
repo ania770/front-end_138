@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <label for="inp_1">возраст:</label>
+        <input class="inp_1" type="number" id="inp_1">
+        <button class="btn">OK</button>
+        <div class="out out_1">
+        </div>
+
+        <label for="inp_2">число от 0 до 9:</label>
+        <input class="inp_2" type="number" id="inp_2">
+        <button class="btn_2">OK</button>
+        <div class="out out_2">
+        </div>
+
+        <label for="inp_3-1">число 1:</label>
+        <input class="inp_3-1" type="number" id="inp_3-1">
+        <br>
+        <span>+</span>
+        <br>
+        <label for="inp_3-2">число 2:</label>
+        <input class="inp_3-2" type="number" id="inp_3-2">
+        <button class="btn_3">=</button>
+        <div class="out out_3">
+        </div>
+
+        <label for="inp_4-1">число 1:</label>
+        <input class="inp_4-1" type="number" id="inp_4-1">
+        <label for="inp_4-2">число 2:</label>
+        <input class="inp_4-2" type="number" id="inp_4-2">
+        <button class="btn_4">НОД</button>
+        <div class="out out_4">
+        </div>
+
+
+        <label for="inp_5">число:</label>
+        <input class="inp_5" type="number" id="inp_5">
+        <button class="btn_5">OK</button>
+        <div class="out out_5">
+        </div>
+
+        <h2>Дни недели</h2>
+        <p> хочешь увидеть следующий день?</p>
+        <div class="out out_6"></div>
+        <button class="btn_yes">да</button>
+        <button class="btn_no">нет</button>
+
+    </div>
+
+    <script>
+        let inp1 = document.querySelector('.inp_1')
+        let out1 = document.querySelector('.out_1')
+        let btn1 = document.querySelector('.btn')
+        btn1.onclick = () => {
+            if (inp1.value >= 0 && inp1.value <= 11) {
+                out1.innerHTML = 'ребенок'
+            } else if (inp1.value >= 12 && inp1.value <= 17) {
+                out1.innerHTML = 'подросток'
+            } else if (inp1.value >= 18 && inp1.value <= 59) {
+                out1.innerHTML = 'взрослый'
+            } else {
+                out1.innerHTML = 'пенсионер'
+            }
+        }
+
+        let inp2 = document.querySelector('.inp_2')
+        let out2 = document.querySelector('.out_2')
+        let btn2 = document.querySelector('.btn_2')
+
+        btn2.onclick = () => {
+            let num = inp2.value.trim()
+            let symbol
+
+            switch (num) {
+                case '1':
+                    symbol = '!';
+                    break;
+                case '2':
+                    symbol = '@';
+                    break;
+                case '3':
+                    symbol = '#';
+                    break;
+                case '4':
+                    symbol = '$';
+                    break;
+                case '5':
+                    symbol = '%';
+                    break;
+                case '6':
+                    symbol = '^';
+                    break;
+                case '7':
+                    symbol = '&';
+                    break;
+                case '8':
+                    symbol = '*';
+                    break;
+                case '9':
+                    symbol = '(';
+                    break;
+                case '0':
+                    symbol = ')';
+                    break;
+            }
+            out2.textContent = symbol;
+        }
+
+        let inp31 = document.querySelector('.inp_3-1')
+        let inp32 = document.querySelector('.inp_3-2')
+        let btn3 = document.querySelector('.btn_3')
+        let out3 = document.querySelector('.out_3')
+
+
+
+        btn3.onclick = () => {
+            let num1 = +inp31.value
+            let num2 = +inp32.value
+            out3.innerHTML = num1 + num2
+        }
+
+
+
+        let inp41 = document.querySelector('.inp_4-1')
+        let inp42 = document.querySelector('.inp_4-2')
+        let btn4 = document.querySelector('.btn_4')
+        let out4 = document.querySelector('.out_4')
+
+        function find(x, y) {
+            x = Math.abs(x);
+            y = Math.abs(y);
+            while (y !== 0) {
+                let temp = y;
+                y = x % y;
+                x = temp;
+            }
+            return x;
+
+        }
+
+        btn4.onclick = () => {
+            let a = +inp41.value;
+            let b = +inp42.value;
+            let result = find(a, b);
+            out4.innerHTML = `НОД: ${result}`
+
+        }
+
+
+        let inp5 = document.querySelector('.inp_5')
+        let out5 = document.querySelector('.out_5')
+        let btn5 = document.querySelector('.btn_5')
+
+
+        btn5.onclick = () => {
+            let num = inp5.value
+            let divisors = [];
+
+            for (let i = 1; i <= num; i++) {
+                if (num % i === 0) {
+                    divisors.push(i);
+                }
+            }
+
+            out5.innerHTML = "Делители числа " + num + ": " + divisors.join(", ");
+        }
+
+        let btnYes = document.querySelector('.btn_yes')
+        let btnNo = document.querySelector('.btn_no')
+        let out6 = document.querySelector('.out_6')
+
+        const daysOfWeek = [
+            "Понеділок",
+            "Вівторок",
+            "Середа",
+            "Четвер",
+            "П'ятниця",
+            "Субота",
+            "Неділя"
+        ];
+
+        let i = 0;
+        function displayDay() {
+            out6.innerHTML = `${daysOfWeek[i]}`;
+        }
+
+        displayDay();
+
+        btnYes.onclick = () => {
+            if (i < daysOfWeek.length - 1) {
+                i++;
+                displayDay();
+            }
+        };
+
+        btnNo.onclick = () => {
+            out6.innerHTML = "Цикл завершен.";
+        };
+    </script>
+
+</body>
+
+</html>

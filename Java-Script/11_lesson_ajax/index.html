@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="out"></div>
+
+    <script>
+        let out = document.querySelector('.out')
+
+        function useApi(num) {
+            fetch('https://rickandmortyapi.com/api/character/?page=2')
+                .then(data => data.json())
+                .then(data => {
+                    console.log(data)
+                    listItem(data.results)
+                })
+                .catch(error => console.error(error))
+        }
+
+        useApi(pages)
+
+        function listItem(user) {
+            console.log(user);
+        }
+
+
+    </script>
+</body>
+
+</html>
