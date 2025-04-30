@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ul {
+            opacity: 0;
+        }
+
+        .open {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 500px;
+
+        }
+
+        .btn_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li {
+            cursor: pointer;
+            max-width: 400px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin: 10px auto;
+            background-color: antiquewhite;
+            list-style-type: none;
+        }
+
+        .btn,
+        .btn_close {
+            max-width: 50px;
+            border-radius: 20px;
+            border: none;
+            padding: 5px 10px;
+            background-color: chartreuse;
+            cursor: pointer;
+        }
+
+        .btn_close {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="container">
+                <div class="btn_content">
+                    <button class="btn btn_open">open</button>
+                </div>
+
+                <ul class="ul"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let cont = document.querySelector('.container')
+        let ul = document.querySelector('.ul')
+        let btnContent = document.querySelector('.btn_content')
+        let btnOpen = document.querySelector('.btn_open')
+        var playList = [
+            {
+                author: "LED ZEPPELIN",
+                song: "STAIRWAY TO HEAVEN"
+            },
+            {
+                author: "QUEEN",
+                song: "BOHEMIAN RHAPSODY"
+            },
+            {
+                author: "LYNYRD SKYNYRD",
+                song: "FREE BIRD"
+            },
+            {
+                author: "DEEP PURPLE",
+                song: "SMOKE ON THE WATER"
+            },
+            {
+                author: "JIMI HENDRIX",
+                song: "ALL ALONG THE WATCHTOWER"
+            },
+            {
+                author: "AC/DC",
+                song: "BACK IN BLACK"
+            },
+            {
+                author: "QUEEN",
+                song: "WE WILL ROCK YOU"
+            },
+            {
+                author: "METALLICA",
+                song: "ENTER SANDMAN"
+            }
+        ];
+
+        playList.map(item => {
+            let li = document.createElement('li')
+            li.classList.add('li')
+            li.textContent = `${item.song} - ${item.author}`
+
+            ul.append(li)
+        })
+
+
+
+        // function closeModal() {
+        //     ul.classList.remove('open')
+        // }
+        function openModal() {
+            ul.classList.add('open')
+            let btnClose = document.createElement('button')
+            btnClose.classList.add('btn_close')
+            btnClose.textContent = 'close'
+
+            btnClose.addEventListener('click', () => {
+                ul.classList.remove('open')
+                btnClose.remove()
+            })
+
+            btnContent.append(btnClose)
+        }
+
+        btnOpen.addEventListener('click', () => {
+            openModal()
+        })
+    </script>
+</body>
+
+</html>
