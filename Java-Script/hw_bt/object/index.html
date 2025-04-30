@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const car = {
+            manufacturer: "Toyota",
+            model: "Corolla",
+            year: 2020,
+            averageSpeed: 80, // км/год
+            fuelTankCapacity: 50, // літрів
+            fuelConsumption: 6, // літрів на 100 км
+            drivers: [],
+
+
+            showInfo: function () {
+                console.log(`Виробник: ${this.manufacturer}`);
+                console.log(`Модель: ${this.model}`);
+                console.log(`Рік випуску: ${this.year}`);
+                console.log(`Середня швидкість: ${this.averageSpeed} км/год`);
+                console.log(`Обсяг паливного баку: ${this.fuelTankCapacity} л`);
+                console.log(`Середня витрата палива: ${this.fuelConsumption} л/100км`);
+                console.log(`Водії: ${this.drivers.join(", ") || "немає"}`);
+            },
+
+
+            addDriver: function (name) {
+                this.drivers.push(name);
+            },
+
+            checkDriver: function (name) {
+                return this.drivers.includes(name);
+            },
+
+            calculateTrip: function (distance) {
+                let time = distance / this.averageSpeed;
+                let breaks = Math.floor(time / 4);
+                let totalTime = time + breaks;
+
+                let fuel = (this.fuelConsumption / 100) * distance
+
+
+                console.log(`Для поїздки потрібно часу: ${totalTime.toFixed(2)} год.`);
+                console.log(`Потрібно палива: ${fuel.toFixed(2)} л.`);
+            }
+        }
+
+        car.showInfo();
+        car.addDriver("Іван");
+        car.addDriver("Олена");
+        console.log(car.checkDriver("Іван")); // true
+        console.log(car.checkDriver("Петро")); // false
+        car.calculateTrip(600); // приклад розрахунку
+
+    </script>
+</body>
+
+</html>

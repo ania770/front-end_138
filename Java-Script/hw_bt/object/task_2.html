@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let time = {
+            hours: 20,
+            minutes: 59,
+            seconds: 45,
+
+            showTime: function () {
+                let h = this.hours.toString().padStart(2, '0');
+                let m = this.minutes.toString().padStart(2, '0');
+                let s = this.seconds.toString().padStart(2, '0');
+
+                console.log(`${h}:${m}:${s}`);
+
+            },
+            addSeconds: function (sec) {
+                this.seconds += sec;
+
+                if (this.seconds >= 60) {
+                    this.minutes += Math.floor(this.seconds / 60)
+                    this.seconds = this.seconds % 60;
+                }
+                if (this.minutes >= 60) {
+                    this.hours += Math.floor(this.minutes / 60);
+                    this.minutes = this.minutes % 60;
+                }
+                if (this.hours >= 24) {
+                    this.hours = this.hours % 24;
+                }
+            },
+            addMinutes: function (min) {
+                this.addSeconds(min * 60);
+            },
+            addHours: function (h) {
+                this.addSeconds(h * 3600);
+            }
+
+        }
+        time.showTime()
+        time.addSeconds(80);
+        time.showTime();
+        // time.addMinutes(15);
+        // time.showTime();
+        // time.addHours(5);
+        // time.showTime();
+
+    </script>
+</body>
+
+</html>
