@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li {
+            cursor: pointer;
+            max-width: 400px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin: 10px auto;
+            background-color: antiquewhite;
+            list-style-type: none;
+        }
+
+
+
+        .line {
+            text-decoration: line-through;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="container">
+                <h2 class="title">Список покупок</h2>
+                <ul class="list">
+
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let ul = document.querySelector('ul')
+        let shoppingList = [
+            { name: "Хліб", quantity: 2, bought: false, price: 20, sum: 40 },
+            { name: "Молоко", quantity: 1, bought: true, price: 35, sum: 35 },
+            { name: "Яблука", quantity: 5, bought: false, price: 10, sum: 50 },
+            { name: "Сир", quantity: 1, bought: false, price: 120, sum: 120 },
+            { name: "Кава", quantity: 1, bought: true, price: 250, sum: 250 },
+            { name: "Огірки", quantity: 3, bought: false, price: 15, sum: 45 },
+            { name: "Помідори", quantity: 4, bought: false, price: 18, sum: 72 },
+            { name: "Яйця", quantity: 10, bought: true, price: 3, sum: 30 }
+        ];
+
+        function showList(shoppingList) {
+            ul.innerHTML = "";
+
+            let notBought = shoppingList.filter(item => !item.bought);
+            let bought = shoppingList.filter(item => item.bought);
+
+            let sortedList = [...notBought, ...bought]
+
+            sortedList.map(item => {
+                listItem = document.createElement('li')
+                listItem.classList.add('item__list')
+                listItem.textContent = `${item.name} — Кількість: ${item.quantity}, Ціна: ${item.price} грн, Сума: ${item.sum} грн, Куплено: ${item.bought ? 'Так' : 'Ні'}`;
+
+
+                if (item.bought) {
+                    listItem.classList.add('line');
+                }
+                let deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Видалити';
+                deleteBtn.style.marginLeft = '10px';
+
+                deleteBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // щоб клік по кнопці не перекреслював li
+                    deleteItem(item.name);
+                });
+
+                listItem.append(deleteBtn);
+
+
+                listItem.addEventListener('click', () => {
+                    listItem.classList.toggle('line');
+                    item.bought = !item.bought;
+                    showList(shoppingList);
+                })
+
+
+                ul.append(listItem);
+            })
+
+        }
+        function deleteItem(productName) {
+            let index = shoppingList.findIndex(item => item.name === productName);
+            if (index !== -1) {
+                shoppingList.splice(index, 1);
+                showList(shoppingList);
+            }
+        }
+
+
+        showList(shoppingList);
+
+    </script>
+</body>
+
+</html>
