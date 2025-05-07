@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .user {
+            display: flex;
+            gap: 10px;
+            padding: 10px 15px;
+        } */
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+            padding: 30px;
+            color: #333;
+        }
+
+        .form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="number"] {
+
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 14px;
+        }
+
+        button {
+            margin: 5px 5px 15px 0;
+            padding: 8px 14px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .user {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .user h2 {
+            margin: 0;
+            font-size: 18px;
+            flex: 1;
+        }
+
+        .user h4 {
+            position: absolute;
+            left: 33%;
+            font-size: 14px;
+            color: #666;
+
+        }
+
+        .span,
+        .save_num {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .span {
+            color: #0056b3;
+        }
+
+        .out {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <input type="text" placeholder="Name" class="inp">
+        <input type="number" placeholder="Age" class="inp2">
+        <button class="btn">Add</button>
+        <span class="span"></span>
+        <br>
+        <button class="save">show save:<span class="save_num">0</span></button>
+        <button class="back">back</button>
+        <span class="out"></span>
+    </div>
+
+    <script>
+
+
+        let arr = []
+
+        let fav = []
+
+        let inp = document.querySelector('.inp')
+        let inp2 = document.querySelector('.inp2')
+        let out = document.querySelector('.out')
+        let btn = document.querySelector('.btn')
+        let span = document.querySelector('.span')
+        let save = document.querySelector('.save')
+        let saveNum = document.querySelector('.save_num')
+        let back = document.querySelector('.back')
+        // переменная локал сторедж
+        const saved = localStorage.getItem('users');
+        if (saved) {
+            arr = JSON.parse(saved);
+        }
+
+        // отрисовка пользователей
+
+        function list2(data) {
+            console.log(data);
+            out.innerHTML = '';
+            fav = [];
+            data.map((item, index) => {
+                if (item.isFavorite) fav.push(item);
+                out.append(createElement(item, index))
+            })
+            updateFavoritesStorage()
+        }
+
+        list2(arr)
+
+
+        // создает юзера
+
+        function createElement(item, index) {
+            let check = document.createElement('input')
+            check.type = 'checkbox'
+            let div = document.createElement('div')
+            div.classList.add('user')
+            let name = document.createElement('h2')
+            name.innerHTML = item.name
+            let age = document.createElement('h4')
+            age.innerHTML = item.age
+            let btn2 = document.createElement('button')
+            btn2.textContent = 'del'
+            //checkbox
+            check.checked = item.isFavorite || false;
+
+            check.addEventListener('change', () => {
+                // console.log('checkbox changed');
+
+                arr[index].isFavorite = check.checked;
+                fav = arr.filter(user => user.isFavorite);
+                saveAll();
+                createSaveNum()
+                console.log('Updated favorites:', fav);
+
+            })
+            //delit
+            btn2.addEventListener('click', () => {
+                arr.splice(index, 1)
+                saveAll();
+                list2(arr)
+                createSpan()
+                createSaveNum()
+            })
+            div.append(check, name, age, btn2)
+
+            return div
+        }
+
+
+        // кнопка save
+        save.addEventListener('click', () => {
+            out.innerHTML = ''
+            fav.map(item => {
+                out.append(createElement(item))
+            })
+        })
+        back.addEventListener('click', () => {
+            list2(arr);
+        })
+
+        // функция записыания по кнопке
+        btn.addEventListener('click', () => {
+            if (inp.value && inp2.value) {
+                out.innerHTML = ''
+                arr.push({
+                    name: inp.value,
+                    age: +inp2.value,
+                    isFavorite: false
+                })
+                saveAll();
+                list2(arr)
+                createSpan()
+                createSaveNum()
+
+                inp.value = ''
+                inp2.value = ''
+            } else {
+                alert('error')
+            }
+        })
+        // save
+        function createSaveNum() {
+            saveNum.textContent = `${fav.length}`
+        }
+
+        // спан с числом юзеров
+        function createSpan() {
+            span.textContent = `${arr.length}`
+        }
+        createSpan()
+        function saveAll() {
+            localStorage.setItem('users', JSON.stringify(arr));  // Сохраняем всех пользователей
+            updateFavoritesStorage();  // Обновляем избранных
+        }
+        function updateFavoritesStorage() {
+            localStorage.setItem('favorites', JSON.stringify(fav));  // Сохраняем избранных
+        }
+
+    </script>
+</body>
+
+</html>
