@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Weather Info</h2>
+    <div class="weather"></div>
+
+    <script>
+        //  const url = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=baca336be074a80e96aad8bdbc68a5ec`
+
+        const weatherBox = document.querySelector('.weather');
+        const lat = 33.44;
+        const lon = -94.04;
+        const apiKey = '058213af958a19a4daf3c60fc21f36ba';
+
+
+        function useApi() {
+
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    const weather = {
+                        temp: data.main.temp,
+                        desc: data.weather[0].description,
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem(apiKey, JSON.stringify(weather));
+                    displayWeather(weather);
+                })
+                .catch(err => {
+                    weatherBox.textContent = 'Ошибка загрузки данных о погоде';
+                    console.error(err);
+                });
+        }
+
+        useApi()
+
+        function displayWeather(data) {
+            weatherBox.innerHTML = `
+        <p>Температура: ${data.temp}°C</p>
+        <p>Стан: ${data.desc}</p>
+      `;
+        }
+        function init() {
+            const saved = localStorage.getItem(apiKey);
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                const now = Date.now();
+                if (now - parsed.timestamp < TWO_HOURS) {
+                    displayWeather(parsed); // показуємо збережені дані
+                    return;
+                }
+            }
+
+            // якщо нема або минуло більше 2 годин
+            fetchWeather();
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

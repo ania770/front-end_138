@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="out">
+
+    </div>
+
+    <script>
+        let out = document.querySelector('.out')
+
+        let users = [
+            {
+                name: "sasha",
+                age: 22,
+                price: 1200
+            },
+            {
+                name: "Sveta",
+                age: 33,
+                price: 5000
+            },
+            {
+                name: "Olha",
+                age: 18,
+                price: 200
+            }
+        ]
+
+        // Карточка Юзера
+        function createUser(item) {
+            // создаем див 
+            let div = document.createElement('div')
+
+            let name = document.createElement('h2')
+            name.textContent = `name: ${item.name}`
+
+            let age = document.createElement('h3')
+            age.textContent = `age: ${item.age}`
+
+            let price = document.createElement('h4')
+            price.textContent = `arice in usd: ${calc(item.price).toFixed(2)}`
+            // закидываем нейм эйдж и прийс в див
+            div.append(name, age, price)
+            // возвращаем див после всех изменений
+            return div
+        }
+
+        // Виводить в Out
+        function list() {
+            // перебираем массив и выводим его в аут с помощью функции создания дива 
+            users.forEach(user => {
+                out.append(createUser(user))
+            })
+        }
+
+        // Долари в Гр 1usd = 41gr
+
+        function calc(price) {
+            let curs = 41
+            return price / curs
+        }
+
+        list()
+
+    </script>
+</body>
+
+</html>
