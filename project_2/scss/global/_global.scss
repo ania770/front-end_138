@@ -1,0 +1,22 @@
+@use '../variables/color-variables' as *;
+@use '../variables/reset';
+
+.wrapper {
+    background-image: url(./img/app-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+
+}
+
+.container {
+    max-width: 1920px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.hidden {
+    display: none;
+}

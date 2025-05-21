@@ -1,0 +1,75 @@
+@use '../variables/color-variables' as *;
+@use '../variables/reset';
+
+.register-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--header-color);
+    padding: 70px;
+    border-radius: 12px;
+    z-index: 999;
+}
+
+
+
+.form input {
+    background-color: var(--text-search);
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px 10px;
+}
+
+.login_title {
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--text-color);
+    text-align: center;
+
+}
+
+.btn_singin {
+    border: none;
+    margin: 20px 0 10px;
+}
+
+.forgot {
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 16px;
+    color: #838199;
+    margin: 10px auto;
+}
+
+.back-link {
+    font-family: Ubuntu;
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 0;
+
+}
+
+.login-container {
+    padding-top: 30px;
+}
+
+.div_logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-link {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}

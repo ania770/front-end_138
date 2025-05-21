@@ -1,0 +1,36 @@
+@use './color-variables';
+
+.wrapper {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+label {
+    color: var(--text-search);
+}
+
+.h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 100%;
+}
+
+.text_episode {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 100%;
+    max-height: 300px;
+    overflow-y: hidden;
+}
+
+.menu__h3 {
+    cursor: pointer;
+}

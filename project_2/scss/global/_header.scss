@@ -1,0 +1,77 @@
+@use '../variables/color-variables' as *;
+@use '../variables/reset';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--header-color);
+    padding: 15px 10px;
+
+    &__container,
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        max-width: 450px;
+        gap: 20px;
+    }
+
+    &__search {
+        position: relative;
+    }
+
+    &__logo {
+        cursor: pointer;
+    }
+}
+
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+
+.inp_search {
+    background-color: var(--bg-search);
+    color: var(--text-color);
+    padding: 15px 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.profile__menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--header-color);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 100;
+    padding: 10px;
+}
+
+.profile__menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile__menu li {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.profile__menu li:hover {
+    background-color: var(--bg-search);
+}
+
+.hidden {
+    display: none;
+}

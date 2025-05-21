@@ -1,0 +1,52 @@
+@use './reset';
+@use './color-variables';
+
+.btn {
+    max-width: 194;
+    border-radius: 60px;
+    border: none;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 34px;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.back-btn {
+    margin-bottom: 30px;
+}
+
+// .heart-icon {
+//     transition: fill 0.3s;
+//     cursor: pointer;
+// }
+
+// .svg-favorited {
+//     fill: red;
+// }
+
+.fav-btn {
+    cursor: pointer;
+    transition: fill 0.3s, stroke 0.3s;
+}
+
+.fav-btn path {
+    stroke: #323232;
+    fill: transparent;
+    transition: fill 0.3s, stroke 0.3s;
+}
+
+.fav-btn.favorited path {
+    fill: red;
+    stroke: red;
+}

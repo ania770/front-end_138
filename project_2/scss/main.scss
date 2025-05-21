@@ -1,0 +1,21 @@
+@use '../scss/variables/color-variables' as *;
+
+@use '../scss/variables/reset';
+
+@use '../scss/variables/button-variables';
+
+@use '../scss/variables/text-variables' as *;
+
+@use '../scss/global/global';
+
+@use '../scss/global/header';
+
+@use '../scss/global/hero';
+
+@use '../scss/global/container-main';
+
+@use '../scss/global/footer';
+
+@use './global/login';
+
+@use './global/profile-page';

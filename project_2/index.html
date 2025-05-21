@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Farro:wght@300;400;500;700&family=Francois+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&family=Tourney:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="header">
+            <div class="container header__container">
+                <div class="logo header__logo">
+                    <svg class="logo header__logo" width="97" height="52" viewBox="0 0 97 52" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M53.5954 49.5644C59.9565 52.5602 68.729 50.5108 76.1903 47.1173C83.1498 43.9518 91.0613 38.6552 95.0879 31.949C97.6438 27.6954 97.0726 23.1211 95.0635 19.0983H87.363C82.6011 19.0983 80.216 21.4826 80.216 26.252V37.4847H77.1555V26.252C77.1555 19.4407 80.5583 16.0378 87.363 16.0378H93.1989C92.6643 15.2978 92.0893 14.5896 91.4881 13.9209C89.7116 11.9446 87.0291 10.0763 84.7171 8.30452C82.4858 6.59466 80.0649 5.2506 76.8497 3.74896C71.3074 1.15931 62.5077 -1.2043 56.1644 0.67908C52.4342 1.78585 50.9523 3.56699 49.2331 6.23824C48.8729 6.23824 46.7297 10.6456 45.9728 15.3775C44.6034 23.9493 44.2554 45.1655 53.5954 49.5644ZM72.553 17.5714C71.1939 17.5714 70.5102 16.8876 70.5102 15.5285C70.5102 14.162 71.1939 13.4848 72.553 13.4848C73.9205 13.4848 74.5968 14.162 74.5968 15.5285C74.5968 16.8876 73.9205 17.5714 72.553 17.5714ZM71.026 37.4847V24.4558L67.958 25.1733V30.3376C67.958 35.1005 65.5738 37.4847 60.8044 37.4847H53.6582C48.8888 37.4847 46.5112 35.4419 46.5112 31.3553C46.5112 28.3858 47.5429 26.6844 49.6139 26.252L52.2598 25.6498L64.8685 22.7628C64.7447 20.3204 63.3856 19.0983 60.8044 19.0983H53.6582C50.9317 19.0983 49.5717 20.464 49.5717 23.184H46.5112C46.5112 18.4221 48.8888 16.0369 53.6582 16.0369H60.8044C65.1855 16.0369 67.5529 18.0487 67.9102 22.0669L74.0875 20.6534V37.4847H71.026ZM60.8044 34.4167C63.531 34.4167 64.8901 33.0577 64.8901 30.3376V25.9452L50.4092 29.2712C49.8512 29.4663 49.5717 29.8152 49.5717 30.3376C49.5717 33.0577 50.9317 34.4167 53.6582 34.4167H60.8044Z"
+                            fill="url(#paint0_linear_4900_1789)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14.1622 16.7674C18.5656 17.9303 21.5555 21.6981 21.5555 26.6441C21.5555 32.634 17.1724 36.9347 11.2029 36.9347C5.22823 36.9347 0.80957 32.634 0.80957 26.6441C0.80957 22.1502 3.296 18.6284 7.06384 17.1498V19.9057C4.94856 21.2222 3.60112 23.608 3.60112 26.6441C3.60112 31.3669 6.86046 34.5154 11.2029 34.5154C15.5453 34.5154 18.764 31.3669 18.764 26.6441C18.764 23.0802 16.9283 20.4127 14.1622 19.3184V16.7674ZM34.8574 16.3921C31.3285 16.3921 28.5726 17.8128 27.098 20.2703V16.5457H24.464V36.7425H27.2149V26.1448C27.2149 21.5374 29.9709 18.8496 34.3489 18.8496C38.2286 18.8496 40.4761 21.0381 40.4761 25.3002V36.7425H43.232V25.0317C43.232 19.2335 39.8202 16.3921 34.8574 16.3921ZM12.3775 14.0745C12.3775 13.6036 12.1893 13.1521 11.8537 12.8195C11.5232 12.4865 11.0706 12.2999 10.6028 12.2999H10.5978C10.13 12.2999 9.67742 12.4865 9.34182 12.8195C9.01131 13.1521 8.82316 13.6036 8.82316 14.0745V25.6826C8.82316 26.1534 9.01131 26.6045 9.34182 26.9375C9.67742 27.2701 10.13 27.4572 10.5978 27.4572H10.6028C11.0706 27.4572 11.5232 27.2701 11.8537 26.9375C12.1893 26.6045 12.3775 26.1534 12.3775 25.6826V14.0745Z"
+                            fill="white" />
+                        <defs>
+                            <linearGradient id="paint0_linear_4900_1789" x1="94.2822" y1="72.739" x2="68.719"
+                                y2="8.38349" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#8E04B7" />
+                                <stop offset="1" stop-color="#E13C52" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="menu header__menu">
+                    <div class="search header__search">
+
+                        <input class="inp inp_search" id="inp_search" type="text">
+                        <label class="label" for="inp_search">Search</label>
+                    </div>
+                    <div class="profile">
+                        <h3 class="h3 menu__h3">Menu
+                            <div class="profile__menu hidden">
+                                <ul>
+                                    <li id="profileBtn">Profile</li>
+                                    <li id="favoritesBtn">Favorite</li>
+                                    <li id="logoutBtn">Log Out</li>
+                                </ul>
+                            </div>
+                        </h3>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="text_content hero__text_content">
+                    <div class="title_content hero__title_content">
+                        <h1 class="title hero__title">Game of thrones</h1>
+                    </div>
+                    <p class="text hero__text">Trouble is brewing in Westeros. For the inhabitants of this world,
+                        control of the Iron Throne holds the lure of great power. But in a land where seasons can last a
+                        lifetime, winter is coming...and beyond the Great Wall that protects them, a forgotten evil has
+                        returned. HBO presents this epic series based on the book series A Song of Ice and Fire by
+                        George R.R. Martin.</p>
+                </div>
+                <div class="btn_content hero__btn_content">
+                    <button class="btn btn_watch"><a href="#main">Watch Now</a></button>
+                </div>
+            </div>
+            <div class="container_swiper hero__container_swiper">
+                <h3 class="title title_swiper">Last episodes:</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper" id="swiper-wrapper"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="profile-page hidden">
+            <div class="container profile-page__container">
+                <aside class="aside profile-page__aside">
+                    <div class="user profile-page__user">
+                        <img class="img profile-page__img" src="./img/user2.png" alt="">
+                        <h4 class="mail profile-page__mail">myemailaddress@gmail.com</h4>
+                        <button class="btn_change profile-page__btn_change"><img src="./img/icon.png" alt=""></button>
+                    </div>
+                    <div class="btn_content profile-page__btn_content">
+                        <button class="btn btn_profile">Profile</button>
+                        <button class="btn btn_favorites" id="favoritesBtnProfile">Favorites</button>
+                    </div>
+                    <button class="btn bnt_logout">Log out</button>
+                </aside>
+                <div class="line"></div>
+                <div class="center-page profile-page__center-page">
+                    <div class="div_profile"><img class="profile_png" src="./img/profile.png" alt="">
+                        <h1 class="title profile-page__title">Profile</h1>
+                    </div>
+
+                    <div class="div_mail">
+                        <input class="inp inp_mail" type="text" id="mail">
+                        <label class="label label_mail" for="mail">Mail</label>
+                    </div>
+                    <div class="div_num">
+                        <input class="inp inp_mail" type="number" id="tel">
+                        <label class="label label_num" for="mail">Number</label>
+                    </div>
+                    <div class="btn_content profile-page__btn_content profile-page__btn_content--save">
+                        <button class="btn btn_save">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="main" id="main">
+            <div class="container main__container">
+                <div class="select_content main__select_content">
+                    <h4 class="title_sel main__title_sel">Select</h4>
+                    <select class="sel main__sel" id="sel">
+                    </select>
+                    <!-- svg sel -->
+                    <svg class="svg_sel main__svg_sel" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                        width="1280.000000pt" height="640.000000pt" viewBox="0 0 1280.000000 640.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                        <metadata>
+                            Created by potrace 1.15, written by Peter Selinger 2001-2017
+                        </metadata>
+                        <g transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)" fill="#D9D9D9"
+                            stroke="none">
+                            <path d="M10 6392 c0 -4 1438 -1445 3195 -3202 l3195 -3194 3195 3194 c1757
+1757 3195 3198 3195 3202 0 5 -2875 8 -6390 8 -3515 0 -6390 -3 -6390 -8z" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="out"></div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="container footer__container">
+                <div class="left_side footer__left_side">
+                    <div class="logo_content footer__logo_content">
+                        <svg width="97" height="52" viewBox="0 0 97 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.5954 49.5644C59.9565 52.5602 68.729 50.5108 76.1903 47.1173C83.1498 43.9518 91.0613 38.6552 95.0879 31.949C97.6438 27.6954 97.0726 23.1211 95.0635 19.0983H87.363C82.6011 19.0983 80.216 21.4826 80.216 26.252V37.4847H77.1555V26.252C77.1555 19.4407 80.5583 16.0378 87.363 16.0378H93.1989C92.6643 15.2978 92.0893 14.5896 91.4881 13.9209C89.7116 11.9446 87.0291 10.0763 84.7171 8.30452C82.4858 6.59466 80.0649 5.2506 76.8497 3.74896C71.3074 1.15931 62.5077 -1.2043 56.1644 0.67908C52.4342 1.78585 50.9523 3.56699 49.2331 6.23824C48.8729 6.23824 46.7297 10.6456 45.9728 15.3775C44.6034 23.9493 44.2554 45.1655 53.5954 49.5644ZM72.553 17.5714C71.1939 17.5714 70.5102 16.8876 70.5102 15.5285C70.5102 14.162 71.1939 13.4848 72.553 13.4848C73.9205 13.4848 74.5968 14.162 74.5968 15.5285C74.5968 16.8876 73.9205 17.5714 72.553 17.5714ZM71.026 37.4847V24.4558L67.958 25.1733V30.3376C67.958 35.1005 65.5738 37.4847 60.8044 37.4847H53.6582C48.8888 37.4847 46.5112 35.4419 46.5112 31.3553C46.5112 28.3858 47.5429 26.6844 49.6139 26.252L52.2598 25.6498L64.8685 22.7628C64.7447 20.3204 63.3856 19.0983 60.8044 19.0983H53.6582C50.9317 19.0983 49.5717 20.464 49.5717 23.184H46.5112C46.5112 18.4221 48.8888 16.0369 53.6582 16.0369H60.8044C65.1855 16.0369 67.5529 18.0487 67.9102 22.0669L74.0875 20.6534V37.4847H71.026ZM60.8044 34.4167C63.531 34.4167 64.8901 33.0577 64.8901 30.3376V25.9452L50.4092 29.2712C49.8512 29.4663 49.5717 29.8152 49.5717 30.3376C49.5717 33.0577 50.9317 34.4167 53.6582 34.4167H60.8044Z"
+                                fill="url(#paint0_linear_4900_1789)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.1622 16.7674C18.5656 17.9303 21.5555 21.6981 21.5555 26.6441C21.5555 32.634 17.1724 36.9347 11.2029 36.9347C5.22823 36.9347 0.80957 32.634 0.80957 26.6441C0.80957 22.1502 3.296 18.6284 7.06384 17.1498V19.9057C4.94856 21.2222 3.60112 23.608 3.60112 26.6441C3.60112 31.3669 6.86046 34.5154 11.2029 34.5154C15.5453 34.5154 18.764 31.3669 18.764 26.6441C18.764 23.0802 16.9283 20.4127 14.1622 19.3184V16.7674ZM34.8574 16.3921C31.3285 16.3921 28.5726 17.8128 27.098 20.2703V16.5457H24.464V36.7425H27.2149V26.1448C27.2149 21.5374 29.9709 18.8496 34.3489 18.8496C38.2286 18.8496 40.4761 21.0381 40.4761 25.3002V36.7425H43.232V25.0317C43.232 19.2335 39.8202 16.3921 34.8574 16.3921ZM12.3775 14.0745C12.3775 13.6036 12.1893 13.1521 11.8537 12.8195C11.5232 12.4865 11.0706 12.2999 10.6028 12.2999H10.5978C10.13 12.2999 9.67742 12.4865 9.34182 12.8195C9.01131 13.1521 8.82316 13.6036 8.82316 14.0745V25.6826C8.82316 26.1534 9.01131 26.6045 9.34182 26.9375C9.67742 27.2701 10.13 27.4572 10.5978 27.4572H10.6028C11.0706 27.4572 11.5232 27.2701 11.8537 26.9375C12.1893 26.6045 12.3775 26.1534 12.3775 25.6826V14.0745Z"
+                                fill="white" />
+                            <defs>
+                                <linearGradient id="paint0_linear_4900_1789" x1="94.2822" y1="72.739" x2="68.719"
+                                    y2="8.38349" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#8E04B7" />
+                                    <stop offset="1" stop-color="#E13C52" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <p class="info footer__info">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem doloribus
+                        neque blanditiis ea, dolor illum sint perferendis, explicabo esse nihil provident obcaecati
+                        recusandae repellat?
+                    </p>
+                    <div class="store footer__store">
+                        <div class="app_store">
+                            <a class="a_store footer__a_store" href="https://www.apple.com/app-store/" target="_blank">
+                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                    alt="App Store" />
+                            </a>
+                        </div>
+                        <div class="google_play">
+                            <a class="a_store footer__a_store" href="https://play.google.com/store" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                    alt="Google Play" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="social_media">
+                        <!-- inst -->
+                        <div class="icon">
+                            <a href="https://instagram.com" target="_blank" class="social-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+                            </a>
+                        </div>
+
+                        <!-- fb -->
+                        <div class="icon">
+                            <a href="https://facebook.com" target="_blank" class="social-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+                            </a>
+                        </div>
+
+                        <!-- tw -->
+                        <div class="icon">
+                            <a href="https://twitter.com" target="_blank" class="social-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+                            </a>
+                        </div>
+
+                        <!-- youtube -->
+                        <div class="icon">
+                            <a href="https://youtube.com" target="_blank" class="social-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+    <div class="register-popup hidden">
+
+
+        <div class="login-container">
+
+            <div class="div_logo">
+                <img class="logo login_logo" src="./img/white-onair-logo.svg" alt="Logo" class="logo">
+            </div>
+
+            <h2 class="title login_title">Login to get started</h2>
+            <form class="form">
+                <input type="text" placeholder="Please enter Mobile/Email address" required>
+                <input type="password" placeholder="Password" required>
+                <button class="btn btn_singin" type="submit">Sign in</button>
+                <a href="#" class="forgot">Forgot password?</a>
+            </form>
+            <a href="#" class="back-link">Back to website</a>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
