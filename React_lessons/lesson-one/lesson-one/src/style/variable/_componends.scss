@@ -1,0 +1,12 @@
+@use '../variable/variable';
+@use './global';
+
+.btn {
+    max-width: 213px;
+    padding: 20px 42px;
+    border: none;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: var(--color-accend);
+}

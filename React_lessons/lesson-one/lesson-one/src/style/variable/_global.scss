@@ -1,0 +1,11 @@
+@use '../variable/variable';
+
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1320px;
+}

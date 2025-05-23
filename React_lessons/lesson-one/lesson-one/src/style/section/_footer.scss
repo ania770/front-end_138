@@ -1,0 +1,56 @@
+@use '../variable/global';
+@use '../variable/variable';
+@use '../variable/componends';
+@use '../variable/text';
+
+.footer {
+    background-color: var(--color-black);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 275px;
+        padding: 80px 0;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        font-size: 14px;
+        letter-spacing: 3px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+
+    // &__svg {
+    //     color: var(--color-white);
+    //     transition: color 0.3s;
+    //     cursor: pointer;
+
+    //     &:hover {
+    //         color: var(--color-accend);
+    //     }
+    // }
+
+}
+
+.footer__svg path {
+    fill: var(--color-white);
+    transition: fill 0.3s;
+}
+
+.footer__svg:hover path {
+    fill: var(--color-accend);
+}

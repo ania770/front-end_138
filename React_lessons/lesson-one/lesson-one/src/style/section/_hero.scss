@@ -1,0 +1,67 @@
+@use '../variable/global';
+@use '../variable/variable';
+@use '../variable/componends';
+@use '../variable/text';
+
+
+.hero {
+    background-image: url('/img/HeaderBackground.jpg');
+    max-width: 100%;
+    padding: 350px;
+    background-position: center;
+
+    &__text {
+        max-width: 345px;
+        margin-bottom: 48px;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__search {
+        position: relative;
+        max-width: 647px;
+    }
+
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 22px;
+        letter-spacing: 6px;
+    }
+
+    &__btn {
+        padding: 12px 20px;
+    }
+
+    &__btn::before {
+        content: url('/img/search_hero.svg');
+        margin-right: 15px;
+    }
+
+    &__btn_content {
+        position: absolute;
+        top: 4px;
+        right: 5px;
+    }
+}
+
+
+
+.inp_search {
+    width: 100%;
+    border: none;
+    padding: 20px 36px;
+}
+
+label {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: var(--color-gray);
+    font-size: 14px;
+    letter-spacing: 4px;
+}

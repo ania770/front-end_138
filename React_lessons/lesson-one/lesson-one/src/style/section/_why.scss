@@ -1,0 +1,57 @@
+@use '../variable/global';
+@use '../variable/variable';
+@use '../variable/componends';
+@use '../variable/text';
+
+.why {
+    background-image: url('/img/WhyBackground.jpg');
+    background-position: center;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 130px;
+        padding: 124px;
+
+    }
+
+    &__text_content {
+        max-width: 550px;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 200;
+        text-transform: none;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 100;
+        margin-bottom: 32px;
+        letter-spacing: 2px;
+    }
+
+    &__img {
+        max-width: 350px;
+    }
+
+    &__img_content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__img:first-child {
+        position: relative;
+        left: -35px;
+    }
+
+    &__img:last-child {
+        position: relative;
+        left: 35px;
+    }
+}

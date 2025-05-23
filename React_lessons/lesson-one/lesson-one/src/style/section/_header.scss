@@ -1,0 +1,34 @@
+@use '../variable/global';
+@use '../variable/variable';
+@use '../variable/componends';
+@use '../variable/text';
+
+.header {
+    background-color: var(--color-accend);
+    // position: fixed;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    &__nav {
+        max-width: 575px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        font-size: 14px;
+        font-weight: 300;
+        list-style: none;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,40 @@
+@use '../variable/global';
+@use '../variable/variable';
+@use '../variable/componends';
+@use '../variable/text';
+
+.booknow2 {
+    background-image: url('/img/booknow2.jpg');
+    background-position: center;
+
+    &__container {
+        padding: 220px 60px 120px;
+        margin-right: 0;
+    }
+
+    &__content {
+        background-color: var(--color-bg);
+        max-width: 600px;
+        padding: 44px 32px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 100;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 100;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+    }
+}

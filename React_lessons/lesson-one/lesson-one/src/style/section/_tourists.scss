@@ -1,0 +1,51 @@
+@use '../variable/global';
+@use '../variable/variable';
+@use '../variable/componends';
+@use '../variable/text';
+
+.tourists {
+    background-image: url('/img/tourists.jpg');
+    background-position: center;
+
+    &__container {
+        padding: 120px;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 300;
+        text-transform: none;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    &__content {
+        background-color: var(--color-steps);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text_content {
+        max-width: 760px;
+        padding: 48px 60px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 28px;
+    }
+
+    &__text::before {
+        content: url('/img/quote-left.svg');
+        margin-right: 8px;
+    }
+}

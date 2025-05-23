@@ -1,0 +1,39 @@
+@use '../variable/global';
+@use '../variable/variable';
+@use '../variable/componends';
+@use '../variable/text';
+
+.steps {
+    background-color: var(--color-steps);
+
+    &__container {
+        position: relative;
+
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 260px;
+        padding: 120px 60px 60px;
+    }
+
+    &__subtitles {
+        font-size: 36px;
+        font-weight: 200;
+
+    }
+
+    &__svg_content {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+.line {
+    position: absolute;
+    top: 45px;
+    left: 216px;
+}
